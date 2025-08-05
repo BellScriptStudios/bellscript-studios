@@ -17,6 +17,19 @@ export default function Home() {
           <a href="#contact" className={styles.cta}>Work with us</a>
         </header>
 
+        <section className={styles.about}>
+          <h2>About Us</h2>
+          <p>
+            BellScript Studios is a creative web development studio based in Michigan.
+            We specialize in building modern, responsive websites and applications that
+            blend functionality with aesthetics.
+          </p>
+          <p>
+            Whether you're launching a startup, refreshing your brand, or developing a custom tool,
+            we bring clarity and craftsmanship to every project we touch.
+          </p>
+        </section>
+
         <section className={styles.projects}>
           <h2>Our Work</h2>
           <p>Comming Soon: A collection of our recent builds and creative experiments</p>
