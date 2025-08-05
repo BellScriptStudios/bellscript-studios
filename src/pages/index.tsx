@@ -22,6 +22,22 @@ export default function Home() {
           <p>Comming Soon: A collection of our recent builds and creative experiments</p>
         </section>
 
+        <section id="contact" className={styles.contact}>
+          <h2>Contact Us</h2>
+          <form className={styles.form}>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" className={styles.submit}>Send Message</button>
+          </form>
+        </section>
+
         <footer className={styles.footer}>
           <p>© {new Date().getFullYear()} BellScript Studios · All rights reserved.</p>
         </footer>
