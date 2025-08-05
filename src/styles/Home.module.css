@@ -7,6 +7,8 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #EAF6FF;
   color: #2c3e50;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .header {
@@ -115,6 +117,21 @@
 
 .form button:hover {
   background-color: #2b4565;
+}
+
+.socials {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.socials a {
+  color: #3d5a80;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.socials a:hover {
+  text-decoration: underline;
 }
 
 .footer {

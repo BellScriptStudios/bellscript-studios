@@ -14,7 +14,16 @@ export default function Home() {
         <header className={styles.header}>
           <h1 className={styles.title}>BellScript Studios</h1>
           <p>Custom web solutions, build with clarity and craft.</p>
-          <a href="#contact" className={styles.cta}>Work with us</a>
+          <a 
+            href="#contact" 
+            className={styles.cta}
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Work with us
+          </a>
         </header>
 
         <section className={styles.about}>
@@ -60,6 +69,11 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <p>© {new Date().getFullYear()} BellScript Studios · All rights reserved.</p>
+          <p>Clarity. Craft. Custom-built for the future.</p>
+          <div className={styles.socials}>
+            <a href="mailto:hello@bellscript.studio">hello@bellscript.studio</a> ·
+            <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          </div>
         </footer>
       </main>
     </>
