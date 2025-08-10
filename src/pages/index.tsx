@@ -1,31 +1,47 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 100);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+    
   return (
     <>
       <Head>
         <title>BellScript Studios</title>
         <meta name="description" content="Full-stack web development studio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      {/* Fixed header with scroll effect */}
+      <header
+        className={`${styles.stickyheader} ${scrolled ? styles.scrolled : ""}`}
+      >
+        <h1
+        style={{cursor: "pointer"}}
+        onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}
+        >
+          BellScript Studios
+        </h1>
+        <a
+          href= "#contact"
+          className={styles.cta}
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Work with us
+        </a>
+      </header>
+      
+      { /* Main content */ }
       <main className={styles.main}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>BellScript Studios</h1>
-          <p>Custom web solutions, build with clarity and craft.</p>
-          <a 
-            href="#contact" 
-            className={styles.cta}
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Work with us
-          </a>
-        </header>
-
         <section className={styles.about}>
           <h2>About Us</h2>
           <p>
@@ -41,7 +57,7 @@ export default function Home() {
 
         <section className={styles.projects}>
           <h2>Our Work</h2>
-          <p>Comming Soon: A collection of our recent builds and creative experiments</p>
+          <p>Coming Soon: A collection of our recent builds and creative experiments.</p>
         </section>
 
         <section id="contact" className={styles.contact}>
