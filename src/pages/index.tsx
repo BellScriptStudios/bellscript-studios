@@ -28,16 +28,16 @@ export default function Home() {
         >
           BellScript Studios
         </h1>
-        <a
-          href= "#contact"
+        <button
+          type="button"
+          aria-label="Contact Us"
           className={styles.cta}
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={() => {
             document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           Work with us
-        </a>
+        </button>
       </header>
       
       { /* Main content */ }
