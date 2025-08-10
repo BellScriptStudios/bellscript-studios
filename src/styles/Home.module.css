@@ -5,8 +5,8 @@
   align-items: center;
   padding: 4rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #EAF6FF;
-  color: #2c3e50;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .stickyheader {
@@ -14,13 +14,13 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: #EAF6FF;
+  background: var(--header-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border);
   color: #2c3e50;
 }
 
@@ -45,8 +45,8 @@
   -webkit-appearance: none;
   border: none;
   padding: 0.75rem 1.5rem;
-  background-color: #00C896;
-  color: #2c3e50;
+  background: var(--accent);
+  color: var(--accentText);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -56,7 +56,15 @@
 }
 
 .cta:hover {
-  background-color: #00b488;
+  background-color: #008e76;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html[data-theme="dark"] .cta:hover {
+  background-color: #33c8b4;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .stickyheader.scrolled .cta {
@@ -67,7 +75,7 @@
 .about {
   padding: 3rem 2rem;
   text-align: center;
-  color: #333;
+  color: var(--text);
 }
 
 .about h2 {
@@ -96,6 +104,7 @@
   padding: 2rem 2rem;
   max-width: 600px;
   margin: 2rem auto;
+  scroll-margin-top: 6rem;
   text-align: left;
 }
 
@@ -125,7 +134,7 @@
 
 .form button {
   background-color: #3d5a80;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 0.75rem;
   border-radius: 4px;
@@ -157,4 +166,37 @@
   text-align: center;
   font-size: 0.875rem;
   color: #888;
+}
+
+.themeToggle {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.themeToggle:hover {
+  background-color: #141625;
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+  transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+html[data-theme="dark"] .themeToggle:hover {
+  background-color: #f4f7fb;
+  transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }

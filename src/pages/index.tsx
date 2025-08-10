@@ -4,12 +4,42 @@ import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      setIsDarkMode(true);
+    } else if (savedTheme === "light") {
+      document.documentElement.removeAttribute("data-theme");
+      setIsDarkMode(false);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (prefersDark) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        setIsDarkMode(true);
+      }
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = !isDarkMode;
+    setIsDarkMode(nextTheme);
+    if (nextTheme) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+  }
+};
     
   return (
     <>
@@ -92,6 +122,16 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      {/* Floating theme toggle button */}
+      <button
+        type="button"
+        aria-label="Toggle Theme"
+        aria-pressed={isDarkMode}
+        className={styles.themeToggle}
+        onClick={toggleTheme}
+      >
+        {isDarkMode ? "☀️" : "🌙"}
+      </button>
     </>
   );
 }
