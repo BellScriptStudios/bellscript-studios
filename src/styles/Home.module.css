@@ -266,6 +266,14 @@ html[data-theme="dark"] .projectThumbWrap {
   text-decoration: underline;
 }
 
+html[data-theme="dark"] .socials a {
+  color: var(--linkColor);
+}
+
+html[data-theme="dark"] .socials a:hover {
+  color: var(--linkHover);
+}
+
 .footer {
   margin-top: 4rem;
   text-align: center;
