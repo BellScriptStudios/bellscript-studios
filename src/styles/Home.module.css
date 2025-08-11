@@ -314,7 +314,30 @@ html[data-theme="dark"] .themeToggle:hover {
   transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
+  .stickyheader h1 {
+    font-size: 1.25rem;
+  }
+
+  .stickyheader.scrolled h1 {
+    font-size: 1rem;
+  }
+
+  .stickyheader {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .cta {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .cta.scrolled {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
   .projectCard {
     flex-direction: column;
     align-items: center;
