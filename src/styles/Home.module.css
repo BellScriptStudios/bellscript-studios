@@ -95,9 +95,114 @@ html[data-theme="dark"] .cta:hover {
   text-align: center;
 }
 
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  }
+
 .projects h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.projectCard {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.projectLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding-bottom: 0.05rem;
+  color: var(--linkColor);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.projectLink:hover {
+  color: var(--linkHover);
+  text-decoration: underline;
+  }
+
+.projectIcon {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+}
+
+.iconFrame {
+  fill: var(--card);
+  stroke: var(--border);
+  stroke-width: 1.2;
+}
+
+.iconAccent {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.iconLine {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+.projectThumbWrap {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: 18rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectThumbWrap:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnailImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.projectThumbWrap:hover .thumbnailImage {
+  transform: scale(1.05);
+}
+
+.projectDetails {
+  flex: 1 1 auto;
+}
+
+html[data-theme="dark"] .projectThumbWrap {
+  border-color: var(--border);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
 .contact {
@@ -199,4 +304,18 @@ html[data-theme="dark"] .cta:hover {
 html[data-theme="dark"] .themeToggle:hover {
   background-color: #f4f7fb;
   transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .projectCard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectThumbWrap {
+    width: 100%;
+    max-width: 28rem;
+  }
+  .projectDetails {
+    width: 100%;
+  }
 }

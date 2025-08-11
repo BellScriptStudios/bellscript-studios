@@ -7,6 +7,8 @@
   --accent: #FF6B6B;
   --accentText: #1b1a3d;
   --header-bg: #00BFA6;
+  --link-color: #0074cc;
+  --link-hover: #005499;
 }
 
 html[data-theme="light"] {
@@ -42,6 +44,8 @@ html[data-theme="dark"] {
     --accent: #0b1b1e;
     --accentText: #ffffff;
     --header-bg: #8be9fd;
+    --linkColor: #4da8ff;
+    --linkHover: #1a8cff;
 }
 
 

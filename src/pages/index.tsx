@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -87,7 +88,53 @@ export default function Home() {
 
         <section className={styles.projects}>
           <h2>Our Work</h2>
-          <p>Coming Soon: A collection of our recent builds and creative experiments.</p>
+          
+          { /* CLI Project */}
+          <div className={styles.projectCard}>
+            <div className={styles.projectThumbWrap}>
+              <a 
+                href="/images/smartspend-thumb.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/smartspend-thumb.png"
+                  alt="SmartSpend CLI Expense Tracker Thumbnail"
+                  width={300}
+                  height={200}
+                  className={styles.thumbnailImage}
+                  priority={false}
+                />
+              </a>
+            </div>
+
+            <div className="{styles.projectDetails}">
+              <div className={styles.projectHeader}>
+                <svg className={styles.projectIcon} viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="14" rx="2" ry="2" className={styles.iconFrame}/>
+                  <path d="M7 10l3 2-3 2" className={styles.iconAccent}/>
+                  <path d="M12 14h5" className={styles.iconLine}/>
+                </svg>
+                <h3>SmartSpend - CLI Expense Tracker</h3>
+              </div>
+
+              <p>
+                SmartSpend is a command-line interface (CLI) tool designed to help users track their expenses
+                efficiently. Built in Python with a focus on simplicity and usability, it allows users to
+                categorize expenses, set budgets, and generate reports directly from the terminal. Featuring multiuser 
+                support, full CRUD, and CSV export functionality.
+              </p>
+
+              <a
+                href="https://github.com/MTinsley00/CLI_Expense_Tracker.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
+                View Project →
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="contact" className={styles.contact}>
@@ -118,7 +165,7 @@ export default function Home() {
           <p>Clarity. Craft. Custom-built for the future.</p>
           <div className={styles.socials}>
             <a href="mailto:hello@bellscript.studio">hello@bellscript.studio</a> ·
-            <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </footer>
       </main>
