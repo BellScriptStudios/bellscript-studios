@@ -15,32 +15,24 @@ export default function Home() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    const pefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (savedTheme === "dark" || (!savedTheme && pefersDark)) {
       document.documentElement.setAttribute("data-theme", "dark");
       setIsDarkMode(true);
-    } else if (savedTheme === "light") {
-      document.documentElement.removeAttribute("data-theme");
-      setIsDarkMode(false);
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (prefersDark) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        setIsDarkMode(true);
-      }
+      document.documentElement.setAttribute("data-theme", "light");
+      setIsDarkMode(false);
     }
   }, []);
 
   const toggleTheme = () => {
     const nextTheme = !isDarkMode;
     setIsDarkMode(nextTheme);
-    if (nextTheme) {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-  }
-};
+    const themeStr = nextTheme ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", themeStr);
+    localStorage.setItem("theme", themeStr);
+  };
     
   return (
     <>
