@@ -73,7 +73,7 @@ export default function Home() {
             blend functionality with aesthetics.
           </p>
           <p>
-            Whether you're launching a startup, refreshing your brand, or developing a custom tool,
+            Whether you&apos;re launching a startup, refreshing your brand, or developing a custom tool,
             we bring clarity and craftsmanship to every project we touch.
           </p>
         </section>
@@ -137,7 +137,7 @@ export default function Home() {
               className={styles.form}
           >
             
-            <p>Have a project in mind? Let's talk!</p>
+            <p>Have a project in mind? Let&apos;s talk!</p>
 
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" required />
