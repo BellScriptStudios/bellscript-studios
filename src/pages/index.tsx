@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import thumb from "../public/images/smartspend-thumb.png";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -86,12 +85,12 @@ export default function Home() {
           <div className={styles.projectCard}>
             <div className={styles.projectThumbWrap}>
               <a 
-                href={thumb.src}
+                href="/images/smartspend-thumb.png"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={thumb}
+                  src="/images/smartspend-thumb.png"
                   alt="SmartSpend CLI Expense Tracker Thumbnail"
                   width={300}
                   height={200}
