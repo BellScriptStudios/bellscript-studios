@@ -338,6 +338,11 @@ html[data-theme="dark"] .themeToggle:hover {
     font-size: 0.75rem;
   }
 
+  .about p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
   .projectCard {
     flex-direction: column;
     align-items: center;
@@ -348,5 +353,13 @@ html[data-theme="dark"] .themeToggle:hover {
   }
   .projectDetails {
     width: 100%;
+  }
+
+  .projectDetails p {
+    font-size: 0.9rem;
+  }
+
+  .projectDetails h3 {
+    font-size: 1.2rem;
   }
 }
