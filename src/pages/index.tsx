@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import thumb from "@/public/images/smartspend-thumb.png";
+import thumb from "../public/images/smartspend-thumb.png";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
