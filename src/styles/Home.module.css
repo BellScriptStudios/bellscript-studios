@@ -9,19 +9,39 @@
   color: var(--text);
 }
 
+.main,
+.footer {
+  padding-left: calc(4rem + env(safe-area-inset-left));
+  padding-right: calc(4rem + env(safe-area-inset-right));
+}
+
 .stickyheader {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background: var(--header-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
+  padding-left: calc(2rem + env(safe-area-inset-left));
+  padding-right: calc(2rem + env(safe-area-inset-right));
   transition: all 0.3s ease;
   border-bottom: 1px solid var(--border);
   color: #2c3e50;
+}
+
+.stickyheader::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top);
+  background: var(--header-bg);
+  z-index: -1;
 }
 
 .stickyheader h1 {
@@ -149,7 +169,7 @@ html[data-theme="dark"] .cta:hover {
 
 .iconFrame {
   fill: var(--card);
-  stroke: var(--border);
+  stroke: var(--cmd-border);
   stroke-width: 1.2;
 }
 
@@ -166,6 +186,10 @@ html[data-theme="dark"] .cta:hover {
   stroke: currentColor;
   stroke-width: 1.6;
   stroke-linejoin: round;
+}
+
+html[data-theme="dark"] .iconFrame {
+  stroke: #ffffff;
 }
 
 .projectThumbWrap {
@@ -198,6 +222,10 @@ html[data-theme="dark"] .cta:hover {
 
 .projectDetails {
   flex: 1 1 auto;
+}
+
+.projectDetails p:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 
 html[data-theme="dark"] .projectThumbWrap {
@@ -274,11 +302,15 @@ html[data-theme="dark"] .socials a:hover {
   color: var(--linkHover);
 }
 
+html[data-theme="dark"] .footer p{
+  color: var(--text);
+}
+
 .footer {
   margin-top: 4rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #888;
+  color: var(--text);
 }
 
 .themeToggle {
@@ -315,37 +347,52 @@ html[data-theme="dark"] .themeToggle:hover {
 }
 
 @media (max-width: 480px) {
-  .stickyheader h1 {
-    font-size: 1.25rem;
-  }
-
-  .stickyheader.scrolled h1 {
-    font-size: 1rem;
-  }
-
   .stickyheader {
-    flex-wrap: wrap;
+    padding: 0.5rem 1rem !important;
+    flex-wrap: nowrap;
     gap: 0.5rem;
   }
 
+  .stickyheader h1 {
+    font-size: 1.25rem !important;
+    white-space: nowrap;
+  }
+
   .cta {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+    flex: 0 0 auto;
+  }
+
+  .main {
+    padding-top: 0.5rem;
+  }
+
+  .about p,
+  .projectDetails p {
     font-size: 0.85rem;
-    padding: 0.5rem 0.75rem;
+    line-height: 1.55;
   }
 
-  .cta.scrolled {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
+  .projectDetails p:not(:last-of-type) {
+    margin-bottom: 0.75rem;
   }
 
-  .about p {
-    font-size: 1rem;
-    max-width: 100%;
+  .projects {
+    padding: 1rem;
+  }
+
+  .projectHeader h3 {
+    font-size: 1.05rem;
   }
 
   .projectCard {
+    width: 100%;
+    max-width: none;
+    padding: 1rem;
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
   .projectThumbWrap {
     width: 100%;
@@ -355,11 +402,110 @@ html[data-theme="dark"] .themeToggle:hover {
     width: 100%;
   }
 
-  .projectDetails p {
+  .projectDetails h3 {
     font-size: 0.9rem;
   }
 
+  .about h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main,
+  .footer {
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+
+  .stickyheader {
+    padding: 0.75rem 1rem;
+}
+  .stickyheader h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .stickyheader {
+    padding: 0.5rem 0.75rem !important;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .stickyheader.scrolled h1{
+    margin-left: 1.5rem;
+    transition: 0.3s ease;
+  }
+
+  .cta.scrolled {
+    margin-right: 1.5rem;
+    transition: 0.3s ease;
+  }
+
+  .stickyheader h1 {
+    font-size: 1.25rem !important;
+    white-space: nowrap;
+    transition: 0.3s ease;
+
+  }
+
+  .cta {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.85rem !important; 
+    flex: 0 0 auto;
+    transition: 0.3s ease;
+  }
+
+  .main {
+    padding-top: 0.5rem;
+  }
+
+  .about p{
+    font-size: 0.65rem;
+    line-height: 1.55;
+  }
+
+  .about h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .form label {
+    font-size: 0.85rem;
+  }
+
+    .projectDetails p:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
   .projectDetails h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .projectDetails p {
+    font-size: 0.6rem;
+  }
+
+  .projectThumbWrap {
+    display: none;
   }
 }

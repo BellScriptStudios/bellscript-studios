@@ -39,6 +39,7 @@ export default function Home() {
       <Head>
         <title>BellScript Studios</title>
         <meta name="description" content="Full-stack web development studio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
 
       {/* Fixed header with scroll effect */}
@@ -54,7 +55,7 @@ export default function Home() {
         <button
           type="button"
           aria-label="Contact Us"
-          className={styles.cta}
+          className={`${styles.cta} ${scrolled ? styles.scrolled: ""}`}
           onClick={() => {
             document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
           }}
@@ -100,7 +101,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="{styles.projectDetails}">
+            <div className={styles.projectDetails}>
               <div className={styles.projectHeader}>
                 <svg className={styles.projectIcon} viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="3" y="4" width="18" height="14" rx="2" ry="2" className={styles.iconFrame}/>
@@ -112,7 +113,10 @@ export default function Home() {
 
               <p>
                 SmartSpend is a command-line interface (CLI) tool designed to help users track their expenses
-                efficiently. Built in Python with a focus on simplicity and usability, it allows users to
+                efficiently.
+              </p>
+              <p>
+                Built in Python with a focus on simplicity and usability, it allows users to
                 categorize expenses, set budgets, and generate reports directly from the terminal. Featuring multiuser 
                 support, full CRUD, and CSV export functionality.
               </p>
