@@ -15,6 +15,31 @@
   padding-right: calc(4rem + env(safe-area-inset-right));
 }
 
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: font-size 0.25s ease, opacity 0.25s ease;
+}
+
 .stickyheader {
   position: fixed;
   top: 0;
@@ -44,18 +69,18 @@
   z-index: -1;
 }
 
-.stickyheader h1 {
-  font-size: 2rem;
-  margin: 0;
-  transition: font-size 0.3s ease, padding 0.3s ease;
-}
-
 .stickyheader.scrolled {
   padding: 0.5rem 1.5rem;
 }
 
-.stickyheader.scrolled h1 {
+.stickyheader.scrolled .logo {
+  transform: scale(0.85);
+  opacity: 0.95;
+}
+
+.stickyheader.scrolled .brandName {
   font-size: 1.25rem;
+  opacity: 0.98;
 }
 
 .cta {
@@ -402,15 +427,17 @@ html[data-theme="dark"] .themeToggle:hover {
 }
 
 @media (max-width: 480px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brandName { font-size: 1.25 rem; }
+
   .stickyheader {
     padding: 0.5rem 1rem !important;
     flex-wrap: nowrap;
     gap: 0.5rem;
-  }
-
-  .stickyheader h1 {
-    font-size: 1.25rem !important;
-    white-space: nowrap;
   }
 
   .cta {
@@ -506,9 +533,6 @@ html[data-theme="dark"] .themeToggle:hover {
   .stickyheader {
     padding: 0.75rem 1rem;
 }
-  .stickyheader h1 {
-    font-size: 1.5rem;
-  }
 
   .cta {
     padding: 0.5rem 1rem;
@@ -517,15 +541,18 @@ html[data-theme="dark"] .themeToggle:hover {
 }
 
 @media (max-height: 500px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+    margin-left: 1.5rem;
+  }
+
+  .brandName { font-size: 1.25; }
+
   .stickyheader {
     padding: 0.5rem 0.75rem !important;
     flex-wrap: nowrap;
     gap: 0.5rem;
-  }
-
-  .stickyheader.scrolled h1{
-    margin-left: 1.5rem;
-    transition: 0.3s ease;
   }
 
   .cta.scrolled {
@@ -533,15 +560,9 @@ html[data-theme="dark"] .themeToggle:hover {
     transition: 0.3s ease;
   }
 
-  .stickyheader h1 {
-    font-size: 1.25rem !important;
-    white-space: nowrap;
-    transition: 0.3s ease;
-
-  }
-
   .cta {
     padding: 0.5rem 0.75rem !important;
+    margin-left: 1.5rem;
     font-size: 0.85rem !important; 
     flex: 0 0 auto;
     transition: 0.3s ease;

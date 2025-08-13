@@ -87,13 +87,33 @@ export default function Home() {
       {/* Fixed header with scroll effect */}
       <header
         className={`${styles.stickyheader} ${scrolled ? styles.scrolled : ""}`}
+        role="banner"
+        aria-label="Site header"
       >
-        <h1
-        style={{cursor: "pointer"}}
-        onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}
+        <div 
+          className={styles.headerBrand}
+          role="button"
+          tabIndex={0}
+          aria-label="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onKeyDown={(e) =>  {
+            if (e.key == "Enter" || e.key === " ") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
         >
-          BellScript Studios
-        </h1>
+          <Image
+            src="/images/bs-logo.png"
+            alt="BellScript Studios logo"
+            width={40}
+            height={40}
+            className={styles.logo}
+            priority={false}
+          />
+          <span className={styles.brandName}> BellScript Studios</span>
+        </div>
+
         <button
           type="button"
           aria-label="Contact Us Button"
@@ -219,7 +239,7 @@ export default function Home() {
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
               >Contact Us</a>
-              
+
               <a href="mailto:hello@bellscript.studio">Email</a>
               <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
             </nav>
