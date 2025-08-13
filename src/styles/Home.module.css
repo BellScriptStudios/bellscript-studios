@@ -122,6 +122,7 @@ html[data-theme="dark"] .cta:hover {
   text-align: center;
   color: var(--text);
   scroll-margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .about h2 {
