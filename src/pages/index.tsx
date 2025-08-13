@@ -169,7 +169,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={styles.projectLink}
               >
-                View Project →
+                Explore the Project →
               </a>
             </div>
           </div>
@@ -219,17 +219,20 @@ export default function Home() {
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
               >Contact Us</a>
+              
               <a href="mailto:hello@bellscript.studio">Email</a>
               <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
             </nav>
 
             <div className={styles.footerMeta}>
               <span>© {new Date().getFullYear()} BellScript Studios</span>
+              <span>All Rights Reserved</span>
               <span>Made in Michigan</span>
             </div>
           </div>
         </footer>
       </main>
+      
       {/* Floating theme toggle button */}
       <button
         type="button"
