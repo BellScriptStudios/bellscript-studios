@@ -38,6 +38,7 @@ export default function Home() {
     <>
       <Head>
         <title>BellScript Studios</title>
+        <link rel="icon" href="/favicon-512.svg" type="image/svg+xml" />
         <meta name="description" content="Full-stack web development studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
@@ -66,7 +67,7 @@ export default function Home() {
       
       { /* Main content */ }
       <main className={styles.main}>
-        <section className={styles.about}>
+        <section id="about" className={styles.about}>
           <h2>About Us</h2>
           <p>
             BellScript Studios is a creative web development studio based in Michigan.
@@ -79,7 +80,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.projects}>
+        <section id="work" className={styles.projects}>
           <h2>Our Work</h2>
           
           { /* CLI Project */}
@@ -157,11 +158,34 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          <p>© {new Date().getFullYear()} BellScript Studios · All rights reserved.</p>
-          <p>Clarity. Craft. Custom-built for the future.</p>
-          <div className={styles.socials}>
-            <a href="mailto:hello@bellscript.studio">hello@bellscript.studio</a> ·
-            <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div className={styles.footerInner}>
+            <div className={styles.footerBrand}>
+              <h3>BellScript Studios</h3>
+              <p>Clarity. Craft. Custom-built for the future.</p>
+            </div>
+            <nav className={styles.footerNav} aria-label="Footer">
+              <a
+                href="#about"
+                onClick={(e) => { e.preventDefault(); document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" }); }}
+              >About</a>
+
+              <a
+                href="#work"
+                onClick={(e) => { e.preventDefault(); document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" }); }}
+              >Our Work</a>
+
+              <a
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              >Contact Us</a>
+              <a href="mailto:hello@bellscript.studio">Email</a>
+              <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+
+            <div className={styles.footerMeta}>
+              <span>© {new Date().getFullYear()} BellScript Studios</span>
+              <span>Made in Michigan</span>
+            </div>
           </div>
         </footer>
       </main>

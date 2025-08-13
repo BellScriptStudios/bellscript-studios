@@ -10,6 +10,9 @@
   --link-color: #0074cc;
   --link-hover: #005499;
   --cmd-border: #000000;
+  --footer-bg: #eef4f9;
+  --footer-text: #2c3e50;
+  --footer-border: #dde4ee;
 }
 
 html[data-theme="light"] {
@@ -21,6 +24,9 @@ html[data-theme="light"] {
   --accent: #ffffff;
   --accentText: #1B3B5F;
   --header-bg: #00BFA6;
+  --footer-bg: #eef4f9;
+  --footer-text: #2c3e50;
+  --footer-border: #dde4ee;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +39,9 @@ html[data-theme="light"] {
     --accent: #0b1b1e;
     --accentText: #ffffff;
     --header-bg: #8be9fd;
+    --footer-bg: #1a1d2a;
+    --footer-text: #e6e8f2;
+    --footer-border: #2a2e44;
   }
 }
 
@@ -47,6 +56,9 @@ html[data-theme="dark"] {
     --header-bg: #8be9fd;
     --linkColor: #4da8ff;
     --linkHover: #1a8cff;
+    --footer-bg: #1a1d2a;
+    --footer-text: #e6e8f2;
+    --footer-border: #2a2e44;
 }
 
 
