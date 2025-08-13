@@ -13,17 +13,40 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const setThemeColorMeta = () => {
+    let meta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'theme-color';
+      document.head.appendChild(meta);
+    }
+
+    const headerBg = getComputedStyle(document.documentElement).getPropertyValue('--header-bg').trim();
+    
+    meta.setAttribute('content', headerBg);
+
+  };
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const pefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const prefersDark = mql.matches;
+    const dark = savedTheme === "dark" || (!savedTheme && prefersDark);
 
-    if (savedTheme === "dark" || (!savedTheme && pefersDark)) {
-      document.documentElement.setAttribute("data-theme", "dark");
-      setIsDarkMode(true);
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      setIsDarkMode(false);
-    }
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    setIsDarkMode(dark)
+    setThemeColorMeta();
+
+    const onChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        const d = e.matches;
+        document.documentElement.setAttribute("data-theme", d ? "dark" : "light");
+        setIsDarkMode(d);
+        setThemeColorMeta();
+      }
+    };
+    mql.addEventListener?.("change", onChange)
+    return () => mql.removeEventListener?.("change", onChange);
   }, []);
 
   const toggleTheme = () => {
@@ -32,13 +55,31 @@ export default function Home() {
     const themeStr = nextTheme ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", themeStr);
     localStorage.setItem("theme", themeStr);
+    setThemeColorMeta();
   };
     
   return (
     <>
       <Head>
         <title>BellScript Studios</title>
+
+        { /* Core favicons */ }
         <link rel="icon" href="/favicon-512.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+        { /* iOS home screen */ }
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        { /* Android / PWA */ }
+        <link rel="manifest" href="/site.webmanifest" />
+
+        { /* Safari pinned tab (monochrome SVG) */ }
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00BFA6" />
+
+
+        { /* SEO Basics */ }
         <meta name="description" content="Full-stack web development studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
@@ -55,7 +96,7 @@ export default function Home() {
         </h1>
         <button
           type="button"
-          aria-label="Contact Us"
+          aria-label="Contact Us Button"
           className={`${styles.cta} ${scrolled ? styles.scrolled: ""}`}
           onClick={() => {
             document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
@@ -200,5 +241,7 @@ export default function Home() {
         {isDarkMode ? "☀️" : "🌙"}
       </button>
     </>
-  );
-}
+    );
+  }
+  
+  

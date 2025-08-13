@@ -29,22 +29,6 @@ html[data-theme="light"] {
   --footer-border: #dde4ee;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141625;
-    --text: #e4e4f7;
-    --muted: #a5accf;
-    --card: #1b1e2c;
-    --border: #2a2e44;
-    --accent: #0b1b1e;
-    --accentText: #ffffff;
-    --header-bg: #8be9fd;
-    --footer-bg: #1a1d2a;
-    --footer-text: #e6e8f2;
-    --footer-border: #2a2e44;
-  }
-}
-
 html[data-theme="dark"] {
     --bg: #141625;
     --text: #e4e4f7;
