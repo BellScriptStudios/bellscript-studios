@@ -61,7 +61,31 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>BellScript Studios</title>
+        <title>BellScript Studios - Full-Stack Web Development</title>
+
+        <link rel="canonical" href="https://bellscript.studio/" />
+
+        {/* SEO meta*/}
+        <meta 
+          name="description"
+          content="BellScript Studios builds modern, accessible, and fast web applications. 
+          Based in Michigan, we specialize in full-stack development and custom digital solutions"
+        />
+        <meta name="keywords" content="web development, full-stack, React, Next.js, Michigan, Detroit, BellScript Studios, Python, SQL, website design, United States" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="BellScript Studios" />
+        <meta property="og:description" content="Modern, accessible, and fast full-stack web development studio based in Michigan." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bellscript.studio/" />
+        { /* <meta property="og:" content="https://bellscript.studio/images/og-image.png" /> */ }
+
+        {/* Twitter Card
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BellScript Studios" />
+        <meta name="twitter:description" content="Modern, accessible, and fast full-stack web development studio based in Michigan." />
+        <meta name="twitter:image" content="https://bellscript.studio/images/og-image.png" /> */}
 
         { /* Core favicons */ }
         <link rel="icon" href="/favicon-512.svg" type="image/svg+xml" />
@@ -78,10 +102,22 @@ export default function Home() {
         { /* Safari pinned tab (monochrome SVG) */ }
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00BFA6" />
 
-
-        { /* SEO Basics */ }
-        <meta name="description" content="Full-stack web development studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "BellScript Studios",
+            "url": "https://bellscript.studio/",
+            "logo": "https://bellscript.studio/images/og-image.png",
+            "sameAs": [
+              "https://github.com/BellScriptStudios",
+              "mailto:hello@bellscript.studio"
+            ],
+            "description": "Full-stack web development studio in Michigan."
+          })
+        }} />
       </Head>
 
       {/* Fixed header with scroll effect */}
@@ -141,7 +177,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="work" className={styles.projects}>
+        <section id="our-work" className={styles.projects}>
           <h2>Our Work</h2>
           
           { /* CLI Project */}
@@ -188,6 +224,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.projectLink}
+                aria-label="View SmartSpend CLI Expense Tracker project on GitHub"
               >
                 Explore the Project →
               </a>
@@ -224,7 +261,8 @@ export default function Home() {
               <h3>BellScript Studios</h3>
               <p>Clarity. Craft. Custom-built for the future.</p>
             </div>
-            <nav className={styles.footerNav} aria-label="Footer">
+
+            <nav className={styles.footerNav} aria-label="Footer navigation">
               <a
                 href="#about"
                 onClick={(e) => { e.preventDefault(); document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" }); }}
@@ -240,8 +278,8 @@ export default function Home() {
                 onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
               >Contact Us</a>
 
-              <a href="mailto:hello@bellscript.studio">Email</a>
-              <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="mailto:hello@bellscript.studio" aria-label="Email BellScript Studios">Email</a>
+              <a href="https://github.com/BellScriptStudios" target="_blank" rel="noopener noreferrer" aria-label="Visit BellScript Studios on GitHub">GitHub</a>
             </nav>
 
             <div className={styles.footerMeta}>
@@ -266,5 +304,3 @@ export default function Home() {
     </>
     );
   }
-  
-  
