@@ -185,13 +185,13 @@ export default function Home() {
           <div className={styles.projectCard}>
             <div className={styles.projectThumbWrap}>
               <a 
-                href="/images/tmb-temp-logo.png"
+                href="/images/tmb-logo.png"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src="/images/tmb-temp-logo.png"
-                  alt="The Morning Bell Co. Thumbnail"
+                  src="/images/tmb-logo.png"
+                  alt="The Morning Bell Co. thumbnail"
                   width={300}
                   height={200}
                   className={styles.thumbnailImage}
