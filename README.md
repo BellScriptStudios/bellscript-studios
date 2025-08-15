@@ -1,5 +1,7 @@
-![Bellscript Studios Logo](/public/bs-studio-logo-trsp.PNG)
-
+<p align="center>
+    <img src="/public/bs-studio-logo-trsp.PNG" alt="BellScript Studios Banner" height="200>
+</p>
+    
 # BellScript Studios Website
 
 **BellScript** Studios is a full-stack freelance development brand under **The Morning Bell Co.**, specializing in building clean, functional, and user-focused digital products — from portfolio sites to custom applications.
