@@ -1,4 +1,4 @@
-<p align="center>
+<p align="center">
     <img src="public/bs-studio-logo-trsp.PNG" alt="BellScript Studios Banner" height="200">
 </p>
     
