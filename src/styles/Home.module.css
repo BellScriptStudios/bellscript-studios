@@ -106,13 +106,17 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.cta.scrolled {
+  transform: 0.3s ease;
+}
+
 html[data-theme="dark"] .cta:hover {
   background-color: #33c8b4;
   color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.stickyheader.scrolled .cta {
+.stickyheader.scrolled {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }

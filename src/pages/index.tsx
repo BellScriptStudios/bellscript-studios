@@ -185,7 +185,7 @@ export default function Home() {
           <div className={styles.projectCard}>
             <div className={styles.projectThumbWrap}>
               <a 
-                href="/images/tmb-co-logo.png"
+                href="/images/tmb-temp-logo.png"
                 target="_blank"
                 rel="noopener noreferrer"
               >
