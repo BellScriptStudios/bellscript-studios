@@ -181,6 +181,74 @@ export default function Home() {
         <section id="our-work" className={styles.projects}>
           <h2>Our Work</h2>
           
+          { /* The Morning Bell Co. Website */}
+          <div className={styles.projectCard}>
+            <div className={styles.projectThumbWrap}>
+              <a 
+                href="/images/tmb-co-logo.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/tmb-temp-logo.png"
+                  alt="The Morning Bell Co. Thumbnail"
+                  width={300}
+                  height={200}
+                  className={styles.thumbnailImage}
+                  priority={false}
+                />
+              </a>
+            </div>
+
+            <div className={styles.projectDetails}>
+              <div className={styles.projectHeader}>
+                <svg className={styles.projectIcon} viewBox="0 0 24 24" aria-hidden="true">
+                  <g transform="translate(0,-0.5)">
+                  {/* Umbrella Canopy */}
+                  <path d="M6 10
+                          Q8 6, 12 6
+                          Q16 6, 18 10" 
+                        className={styles.iconAccent}/>
+
+                  {/* Umbrella Scallops */}
+                  <path d="M6 11 q1 2 2 0
+                          q1 2 2 0
+                          q1 2 2 0
+                          q1 2 2 0
+                          q1 2 2 0
+                          q1 2 2 0" 
+                        className={styles.iconAccent}/>
+                  {/* Umbrella Handle */}
+                    <path d="M12 11 v4 
+                            a3 3 0 0 1 -3 3 
+                            a2 2 0 0 0 2 -2" className={styles.iconLine} />
+                  </g>
+                </svg>
+                <h3>The Morning Bell Co.</h3>
+              </div>
+
+              <p>
+                The Morning Bell Co. — Our own parent brand website built to 
+                unify and showcase all ventures under our company umbrella.
+              </p>
+              <h5> Key Features: </h5>
+                <p> •	Clean, corporate-polished UI consistent with sub-brand styles </p>
+                <p> •	Responsive, mobile-first design for optimal accessibility </p>
+                <p> •	Portfolio showcase linking directly to each brand site</p>
+                <p> •	Optimized for speed, SEO, and cross-browser compatibility</p>
+
+              <a
+                href="https://www.themorningbell.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+                aria-label="View themorningbell.co website"
+              >
+                Coming Soon
+              </a>
+            </div>
+          </div>
+          
           { /* CLI Project */}
           <div className={styles.projectCard}>
             <div className={styles.projectThumbWrap}>
@@ -211,13 +279,23 @@ export default function Home() {
               </div>
 
               <p>
-                SmartSpend is a command-line interface (CLI) tool designed to help users track their expenses
-                efficiently.
+                SmartSpend is a command-line interface (CLI) application 
+                designed to make expense tracking simple and efficient.
               </p>
+
+              <h5>Features:</h5>
+              	<p> •	Multi-user account support for personalized data tracking </p>
+                <p> •	Full CRUD operations to add, edit, and delete expense entries </p>
+                <p> •	Budget-setting tools with category-based organization </p>
+                <p> • CSV export for seamless data backup and analysis </p>
+                <p> •	Clean, intuitive terminal interface for fast navigation </p>
+
+              <h5>Outcome:</h5>
               <p>
-                Built in Python with a focus on simplicity and usability, it allows users to
-                categorize expenses, set budgets, and generate reports directly from the terminal. Featuring multiuser 
-                support, full CRUD, and CSV export functionality.
+                Delivered a fully functional, lightweight financial tracking solution 
+                that allows users to manage expenses without complex software.
+                The project showcases skills in Python development, 
+                data handling, and user-centric design in a non-GUI environment.
               </p>
 
               <a
@@ -229,6 +307,63 @@ export default function Home() {
               >
                 Explore the Project →
               </a>
+            </div>
+          </div>
+          
+          {/* Candle Phase Project */}
+          <div className={styles.projectCard}>
+            <div className={styles.projectThumbWrap}>
+              <a 
+                href="/images/candle-phase-bs-thumbnail.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/candle-phase-bs-thumbnail.png"
+                  alt="SmartSpend CLI Expense Tracker Thumbnail"
+                  width={300}
+                  height={200}
+                  className={styles.thumbnailImage}
+                  priority={false}
+                />
+              </a>
+            </div>
+
+            <div className={styles.projectDetails}>
+              <div className={styles.projectHeader}>
+                <svg className={styles.projectIcon} viewBox="0 0 24 24" aria-hidden="true" >
+
+                  { /* Outer Frame */ }
+                  <rect x="3" y="4" width="18" height="14" rx="2" ry="2" className={styles.iconFrame}/>
+
+                  { /* Awning Top Bar */ }
+                  <path d="M4 5 h16 v2.5 H4 z" className={styles.iconAccentThree} />
+
+                  { /* Awning Scallops */ }                  
+                  <path d="M4 7 q2 2 4 0 q2 2 4 0 q2 2 4 0 q2 2 4 0" className={styles.iconAccentThree} />
+                  
+                  { /* Door */ }  
+                  <rect x="10.5" y="12" width="3" height="6" rx="0.5" className={styles.iconLineThree} /> 
+                  { /* Window */ }  
+                  <rect x="6" y="12" width="3" height="3" rx="0.5" className={styles.iconLineThree} /> 
+                </svg>
+                <h3>Candle Phase</h3>
+              </div>
+
+              <p> Something Beautiful is on the Horizon </p>
+              <p> We’re pouring, curing, and crafting the perfect collection just for you. </p>
+              <p> From healing to hustle, love to glow-up — your phase is about to be lit. </p>
+
+              <a
+                href="/images/candle-phase-bs-thumbnail.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+                aria-label=""
+              >
+                Coming Soon
+              </a>
+              <p><i>Light your phase. Live your story.</i></p>
             </div>
           </div>
         </section>
@@ -270,8 +405,8 @@ export default function Home() {
               >About</a>
 
               <a
-                href="#work"
-                onClick={(e) => { e.preventDefault(); document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" }); }}
+                href="#our-work"
+                onClick={(e) => { e.preventDefault(); document.querySelector("#our-work")?.scrollIntoView({ behavior: "smooth" }); }}
               >Our Work</a>
 
               <a

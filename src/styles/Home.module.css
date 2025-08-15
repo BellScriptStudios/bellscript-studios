@@ -203,15 +203,29 @@ html[data-theme="dark"] .cta:hover {
 
 .iconAccent {
   fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.8;
+  stroke: var(--cmd-border);
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
+.iconAccentThree {
+  fill: var(--cmd-border);
+  stroke: var(--cmd-border);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.iconLineThree {
+  fill: none;
+  stroke: var(--cmd-border);
+  stroke-width: 1;
+}
+
 .iconLine {
   fill: none;
-  stroke: currentColor;
+  stroke: var(--cmd-border);
   stroke-width: 1.6;
   stroke-linejoin: round;
 }
@@ -250,6 +264,10 @@ html[data-theme="dark"] .iconFrame {
 
 .projectDetails {
   flex: 1 1 auto;
+}
+
+.projectDetails h5 {
+  margin-bottom: 0.25rem;
 }
 
 .projectDetails p:not(:last-of-type) {

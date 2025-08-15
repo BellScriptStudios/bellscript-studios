@@ -40,6 +40,7 @@ html[data-theme="dark"] {
     --header-bg: #8be9fd;
     --linkColor: #4da8ff;
     --linkHover: #1a8cff;
+    --cmd-border: #ffffff;
     --footer-bg: #1a1d2a;
     --footer-text: #e6e8f2;
     --footer-border: #2a2e44;
