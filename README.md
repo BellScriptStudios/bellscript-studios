@@ -1,5 +1,5 @@
 <p align="center>
-    <img src="/public/bs-studio-logo-trsp.PNG" alt="BellScript Studios Banner" height="200>
+    <img src="/public/bs-studio-logo-trsp.PNG" alt="BellScript Studios Banner" height="200">
 </p>
     
 # BellScript Studios Website
@@ -28,7 +28,7 @@ We specialize in modern web technologies and frameworks, including:
 ## Featured Projects
 
 ### **SmartSpend — CLI Expense Tracker**
-A Python-based command-lin interface tool for expense tracking with multi-user support, full CRUD functionality, and CSV export.
+A Python-based command-line interface tool for expense tracking with multi-user support, full CRUD functionality, and CSV export.
 [View Project →](https://github.com/MTinsley00/CLI_Expense_Tracker.git)
 
 ---
