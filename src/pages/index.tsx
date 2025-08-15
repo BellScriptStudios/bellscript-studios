@@ -355,7 +355,7 @@ export default function Home() {
               <p> From healing to hustle, love to glow-up — your phase is about to be lit. </p>
 
               <a
-                href="/images/candle-phase-bs-thumbnail.png"
+                href="https://www.candlephase.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.projectLink}
