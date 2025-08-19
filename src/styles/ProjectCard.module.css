@@ -1,0 +1,239 @@
+/* Card container */
+.projectCard {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.projectBlurb {
+    margin-bottom: 1.1rem;
+    line-height: 1.5;
+}
+
+.ctaSlot {
+    margin-top: 0.5rem;
+    min-height: 2.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.ctaPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    line-height: 1;
+}
+
+.projectLink.ctaPill {
+    color: var(--linkColor);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Thumbnail */
+.projectThumbWrap {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: 18rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectThumbWrap:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnailImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.projectThumbWrap:hover .thumbnailImage {
+  transform: scale(1.05);
+}
+
+html[data-theme="dark"] .projectThumbWrap {
+  border-color: var(--border);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Details & header */
+.projectDetails {
+  flex: 1 1 auto;
+}
+
+.projectDetails p {
+    margin-bottom: 1rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.projectDetails h5 {
+  margin-bottom: 0.25rem;
+}
+
+.projectDetails p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.projectHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.25;
+}
+
+/* Coming Soon badge */
+.badge {
+    align-self: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1;
+    background: var(--soonBadge);
+    color: var(--soonText);
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+/* Coming Soon bagde */
+.projectLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding-bottom: 0.05rem;
+  color: var(--linkColor);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.projectLink:hover {
+  color: var(--linkHover);
+  text-decoration: underline;
+  }
+
+.projectLink:focus-visible,
+.projectCard :where(a, button):focus-visible {
+    outline: 2px solid var(--linkHover, #005499);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+
+/* Icon styles */
+.projectIcon {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+}
+
+.iconFrame {
+  fill: var(--card);
+  stroke: var(--cmd-border);
+  stroke-width: 1.2;
+}
+
+.iconAccent {
+  fill: none;
+  stroke: var(--cmd-border);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.iconAccentThree {
+  fill: var(--cmd-border);
+  stroke: var(--cmd-border);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.iconLineThree {
+  fill: none;
+  stroke: var(--cmd-border);
+  stroke-width: 1;
+}
+
+.iconLine {
+  fill: none;
+  stroke: var(--cmd-border);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+
+html[data-theme="dark"] .iconFrame {
+  stroke: #ffffff;
+}
+
+/* Features list */
+.features {
+    margin: 0.25rem 0 0.5rem;
+    padding-left: 1.125rem;
+}
+
+.features li {
+    margin: 0.25rem 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .projectCard {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .projectThumbWrap {
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .projectTitle { font-size: 1rem; white-space: nowrap;}
+
+    .projectDetails {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectThumbWrap {
+        display: none;
+    }
+}
+
+@media (max-height: 500px) {
+    .projectThumbWrap { display: none; }
+}

@@ -1,0 +1,41 @@
+.section {
+    padding: 2rem 2rem;
+    text-align: center;
+    scroll-margin-top: 6rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.4rem;
+}
+
+.intro {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0 auto 1.5rem;
+    max-width: 40rem;
+}
+
+.stack {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section { padding: 1.5rem 1rem; }
+    .section h2 { font-size: 1.6rem; }
+    .intro { font-size: 0.95rem; margin-bottom: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+    .section { padding: 1.25rem 1rem; }
+    .section h2 { font-size: 1.4rem; }
+    .intro { font-size: 0.9rem; }
+}
+
+@media (max-height: 500px) {
+    .intro { font-size: 1rem; }
+}

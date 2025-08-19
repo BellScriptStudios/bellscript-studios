@@ -5,6 +5,8 @@
   --card: #ffffff;
   --border: #dde4ee;
   --accent: #FF6B6B;
+  --soonBadge: #fef3c7;
+  --soonText: #b45309;
   --accentText: #1b1a3d;
   --header-bg: #00BFA6;
   --link-color: #0074cc;
@@ -38,6 +40,8 @@ html[data-theme="dark"] {
     --border: #2a2e44;
     --accent: #0b1b1e;
     --accentText: #ffffff;
+    --soonBadge: #fcd34d;
+    --soonText: #78350f;
     --header-bg: #8be9fd;
     --linkColor: #4da8ff;
     --linkHover: #1a8cff;

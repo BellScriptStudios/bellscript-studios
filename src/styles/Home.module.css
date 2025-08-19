@@ -35,148 +35,6 @@
   line-height: 1.6;
 }
 
-.projects {
-  padding: 2rem 2rem;
-  text-align: center;
-  scroll-margin-top: 6rem ;
-}
-
-.projectHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-  }
-
-.projects h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.projectCard {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left;
-}
-
-.projectCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.projectLink {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding-bottom: 0.05rem;
-  color: var(--linkColor);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.projectLink:hover {
-  color: var(--linkHover);
-  text-decoration: underline;
-  }
-
-.projectIcon {
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 auto;
-}
-
-.iconFrame {
-  fill: var(--card);
-  stroke: var(--cmd-border);
-  stroke-width: 1.2;
-}
-
-.iconAccent {
-  fill: none;
-  stroke: var(--cmd-border);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.iconAccentThree {
-  fill: var(--cmd-border);
-  stroke: var(--cmd-border);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.iconLineThree {
-  fill: none;
-  stroke: var(--cmd-border);
-  stroke-width: 1;
-}
-
-.iconLine {
-  fill: none;
-  stroke: var(--cmd-border);
-  stroke-width: 1.6;
-  stroke-linejoin: round;
-}
-
-html[data-theme="dark"] .iconFrame {
-  stroke: #ffffff;
-}
-
-.projectThumbWrap {
-  flex: 0 0 auto;
-  max-width: 100%;
-  width: 18rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: var(--card);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectThumbWrap:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.thumbnailImage {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.projectThumbWrap:hover .thumbnailImage {
-  transform: scale(1.05);
-}
-
-.projectDetails {
-  flex: 1 1 auto;
-}
-
-.projectDetails h5 {
-  margin-bottom: 0.25rem;
-}
-
-.projectDetails p:not(:last-of-type) {
-  margin-bottom: 1rem;
-}
-
-html[data-theme="dark"] .projectThumbWrap {
-  border-color: var(--border);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
-}
-
 .contact {
   padding: 2rem 2rem;
   max-width: 600px;
@@ -223,75 +81,18 @@ html[data-theme="dark"] .projectThumbWrap {
   background-color: #2b4565;
 }
 
-.socials {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-}
-
-.socials a {
-  color: #3d5a80;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.socials a:hover {
-  text-decoration: underline;
-}
-
-html[data-theme="dark"] .socials a {
-  color: var(--linkColor);
-}
-
-html[data-theme="dark"] .socials a:hover {
-  color: var(--linkHover);
-}
-
 @media (max-width: 480px) {
 
   .main {
     padding-top: 0.5rem;
   }
 
-  .about p,
-  .projectDetails p {
+  .about p {
     font-size: 0.85rem;
     line-height: 1.55;
   }
 
-  .projectDetails p:not(:last-of-type) {
-    margin-bottom: 0.75rem;
-  }
-
-  .projects {
-    padding: 1rem;
-  }
-
-  .projectHeader h3 {
-    font-size: 1.05rem;
-  }
-
-  .projectCard {
-    width: 100%;
-    max-width: none;
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .projectThumbWrap {
-    width: 100%;
-    max-width: 28rem;
-  }
-  .projectDetails {
-    width: 100%;
-  }
-
-  .projectDetails h3 {
-    font-size: 0.9rem;
-  }
-
   .about h2,
-  .projects h2,
   .contact h2 {
     font-size: 1.5rem;
   }
@@ -345,7 +146,6 @@ html[data-theme="dark"] .socials a:hover {
   }
 
   .about h2,
-  .projects h2,
   .contact h2 {
     font-size: 1.5rem;
   }
@@ -357,22 +157,6 @@ html[data-theme="dark"] .socials a:hover {
 
   .form label {
     font-size: 0.85rem;
-  }
-
-    .projectDetails p:not(:last-of-type) {
-    margin-bottom: 0.5rem;
-  }
-
-  .projectDetails h3 {
-    font-size: 1.1rem;
-  }
-
-  .projectDetails p {
-    font-size: 0.6rem;
-  }
-
-  .projectThumbWrap {
-    display: none;
   }
 
   .footerInner {
