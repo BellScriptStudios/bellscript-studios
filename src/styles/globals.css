@@ -32,6 +32,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
     --bg: #141625;
     --text: #e4e4f7;
+    --hamburger: #22223b;
     --muted: #a5accf;
     --card: #1b1e2c;
     --border: #2a2e44;
