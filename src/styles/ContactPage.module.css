@@ -1,0 +1,110 @@
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: var(--text);
+}
+
+.header { 
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+
+.lead {
+    margin: 0 auto;
+    max-width: 42rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.h2 { font-size: 1.25rem; margin: 0 0 0.75rem; }
+.form { display: grid; gap: 0.75rem;}
+.form label { font-weight: 600; }
+
+.form input,
+.form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.submit {
+    background: var(--header-bg);
+    color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit:hover { background: var(--btn-hover); }
+
+.calCard { padding: 0; overflow: hidden; }
+.calCard h2 { padding: 1rem 1rem 0.5rem; margin: 0; }
+
+.calEmbed {
+    display: block;
+    width: 100%;
+    min-height: 720px;
+    border-top: 1px solid var(--border);
+    background: var(--card);
+}
+
+.calCard :is(iframe, .calendly-inline-widget iframe) {
+    background: var(--card);
+    border: 0;
+    width: 100%;
+    min-height: 720px;
+    display: block;
+}
+
+html[data-theme="dark"] .calCard {
+    background: var(--card);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] .calEmbed {
+    background: var(--card);
+    box-shadow: inset 0 0 0 1px var(--border);
+}
+
+@media (max-width: 980px) {
+    .grid { grid-template-columns: 1fr; }
+    .h2 { font-size: 1.1rem; }
+    .calEmbed,
+    .calCard :is(iframe, .calendly-inline-widget iframe) {
+        min-height: 680px;
+    }
+}
+
+@media (max-height: 500px) {
+    .h1 { font-size: 1.5rem; }
+    .h1 { font-size: 1.1rem; }
+}
+
+@media (max-height: 600px) {
+    .calEmbed,
+    .calCard :is(iframe, .calendly-inline-widget iframe) {
+        min-height: 680px;
+    }
+}

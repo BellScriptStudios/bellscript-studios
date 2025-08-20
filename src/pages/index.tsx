@@ -36,29 +36,6 @@ export default function Home() {
           intro="A quick overview of what we offer."
           items={FEATURED_SERVICES}
         />
-
-        <section id="contact" className={styles.contact}>
-          <h2>Contact Us</h2>
-          <form
-              action="https://formspree.io/f/xyzpnbed"
-              method="POST"
-              className={styles.form}
-          >
-            
-            <p>Have a project in mind? Let&apos;s talk!</p>
-
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
-
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={4} required></textarea>
-
-            <button type="submit" className={styles.submit}>Send Message</button>
-          </form>
-        </section>
       </main>
     </>
     );

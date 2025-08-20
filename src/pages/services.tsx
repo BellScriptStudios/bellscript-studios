@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
                 <div className={styles.bottomCta}>
                     <Link
-                        href="/#contact"
+                        href="/contact"
                         className={styles.primaryCta}
                         aria-label="Contact BellScript Studios"
                     >

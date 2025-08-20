@@ -116,7 +116,7 @@ export default function Header() {
                     <nav className={styles.nav} aria-label="Primary navigation">
                         <button className={styles.link} onClick={() => jumpTo("#about")}>About</button>
                         <button className={styles.link} onClick={() => jumpTo("#our-work")}>Our Work</button>
-                        <button className={styles.link} onClick={() => jumpTo("#services")}>Services</button>
+                        <button className={styles.link} onClick={() => { window.location.href = "/services"}}>Services</button>
                     </nav>
 
                     {menuOpen && (
@@ -130,7 +130,7 @@ export default function Header() {
                             <Link href="/#about" onClick={() => setMenuOpen(false)}>About</Link>
                             <Link href="/#our-work" onClick={() => setMenuOpen(false)}>Our Work</Link>
                             <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
-                            <Link href="/#contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+                            <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
                         </div>
                     )}
                     <div className={styles.actions}>
@@ -151,9 +151,8 @@ export default function Header() {
                         type="button"
                         aria-label="Contact Us Button"
                         className={`${styles.cta} ${scrolled ? styles.scrolled: ""}`}
-                        onClick={() => {
-                            document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        onClick={() => { 
+                            window.location.href = "/contact"}}
                         >
                         Work with us
                         </button>
