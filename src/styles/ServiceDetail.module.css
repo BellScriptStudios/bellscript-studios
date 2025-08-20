@@ -1,0 +1,73 @@
+.detailBody{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.header { margin-bottom: 2rem; text-align: center; }
+.h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.meta {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0.25rem 0;
+}
+
+.leaf {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var--text;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.columns {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+}
+
+.h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.list {
+    list-style: disc inside;
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+.list li { margin-bottom: 0.4rem; }
+
+.outcomeText {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.5rem;
+}
+
+.backNav { margin: 1.5rem 0; }
+
+.backLink {
+    display: inline-block;
+    color: var(--cmd-border);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.backLink:hover {text-decoration: underline; background: var(--btn-hover);}
+
+@media (max-height: 960px) {.h1 { margin-top: 1.5rem;} }

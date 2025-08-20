@@ -2,6 +2,9 @@ import styles from "@/styles/Home.module.css";
 import ProjectSection from "@/components/ProjectSection";
 import { PROJECTS } from "@/data/projects";
 
+import ServicesSection from "@/components/ServicesSection";
+import { FEATURED_SERVICES } from "@/data/services"
+
 export default function Home() {
   return (
     <>    
@@ -25,6 +28,13 @@ export default function Home() {
           heading="Our Work"
           intro="A few recent builds and brand projects we’re excited about."
           items={PROJECTS}
+        />
+
+        <ServicesSection
+          id="services"
+          heading="Services"
+          intro="A quick overview of what we offer."
+          items={FEATURED_SERVICES}
         />
 
         <section id="contact" className={styles.contact}>

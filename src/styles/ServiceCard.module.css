@@ -1,0 +1,52 @@
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    text-align: left;
+    transition: box-shadow 0.25s ease transform 0.25s ease;
+}
+
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
+
+.header { display: flex;
+    align-items: center;
+    gap: 0.625ren;
+    margin-bottom: 0.25rem;
+}
+
+.title { margin: 0; font-size: 1.1ren; }
+
+.blurb { 
+    margin: .0.75rem 0 0.75rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.bullets { margin: 0 0 0.75rem; padding-left: 1.1rem; }
+.bullets li { margin:  0.25rem; }
+.ctaRow { margin-top: 0.25rem;}
+
+.link {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--link-color);
+    border-bottom: 1px solid transparent;
+}
+
+.link:hover { color: var(--link-hover); border-color: var(--link-hover); }
+
+.icon { width: 1.5rem; height: 1.5rem; flex: 0 0 auto; margin-right: 0.25rem; }
+.iconFrame { fill: none; stroke: var(--cmd-border); stroke-width: 1.5; }
+
+.iconLine {
+    fill: none;
+    stroke: var(--cmd-border);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+    .card { padding: 1rem; }
+}

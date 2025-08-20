@@ -9,6 +9,7 @@
   --soonText: #b45309;
   --accentText: #1b1a3d;
   --header-bg: #00BFA6;
+  --btn-hover: #008e76;
   --link-color: #0074cc;
   --link-hover: #005499;
   --cmd-border: #000000;
@@ -43,6 +44,7 @@ html[data-theme="dark"] {
     --soonBadge: #fcd34d;
     --soonText: #78350f;
     --header-bg: #8be9fd;
+    --btn-hover: #33c8b4;
     --linkColor: #4da8ff;
     --linkHover: #1a8cff;
     --cmd-border: #ffffff;
