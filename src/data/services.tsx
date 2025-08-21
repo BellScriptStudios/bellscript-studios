@@ -310,7 +310,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                             "Security updates",
                             "1 hour changes",
                         ],
-                        featured: true,
+                        featured: false,
                     },
                     {
                         id: "growth",
@@ -333,7 +333,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                             "Priority support",
                             "Monthly UX review",
                         ],
-                        featured: true,
+                        featured: false,
                     },
                 ],
                 href: "/services#site-care-plans",

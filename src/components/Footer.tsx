@@ -29,13 +29,12 @@ export default function Footer() {
                 </a>
 
             </nav>
-
+            </div>
             <div className={styles.footerMeta}>
               <span>© {new Date().getFullYear()} BellScript Studios</span>
               <span>All Rights Reserved</span>
               <span>Made in Michigan</span>
             </div>
-          </div>
         </footer>
     );
 }
