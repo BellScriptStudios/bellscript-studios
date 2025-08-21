@@ -35,7 +35,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
                 {plans?.length ? (
                     <section className={styles.section}>
-                        <h2 className={styles.h2}>Plans</h2>
                         <div className={styles.plans}>
                             {plans.map((plan) => (
                                 <div
