@@ -3,7 +3,17 @@ import styles from "@/styles/ServiceDetail.module.css";
 import { Service } from "@/data/services";
 
 export default function ServiceDetail({ service }: { service: Service }) {
-    const { title, priceFrom, timeline, long, blurb, includes, bullets, outcome } = service;
+    const {
+        title,
+        priceFrom,
+        timeline,
+        long,
+        blurb,
+        includes,
+        bullets,
+        outcome,
+        plans,
+     } = service;
 
     const hasIncludes = Array.isArray(includes) && includes.length > 0;
     const hasBullets = Array.isArray(bullets) && bullets.length > 0;
@@ -22,6 +32,30 @@ export default function ServiceDetail({ service }: { service: Service }) {
                         <strong>Starting at:</strong> {priceFrom}
                     </p>
                 )}
+
+                {plans?.length ? (
+                    <section className={styles.section}>
+                        <h2 className={styles.h2}>Plans</h2>
+                        <div className={styles.plans}>
+                            {plans.map((plan) => (
+                                <div
+                                key={plan.id}
+                                className={`${styles.plans} ${
+                                    plan.featured ? styles.featured : ""
+                                }`}
+                                >
+                                    <h3>{plan.name}</h3>
+                                    <p className={styles.price}>{plan.price}</p>
+                                    <ul className={styles.perks}>
+                                        {plan.perks.map((perk, i) => (
+                                            <li key={i}>{perk}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                ) : null }
 
                 {timeline && (
                     <p className={styles.meta}>

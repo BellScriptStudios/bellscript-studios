@@ -1,3 +1,11 @@
+export type PlanTier = {
+    id: string;
+    name: string;
+    price: string;
+    perks: string[];
+    featured?: boolean;
+};
+
 export type Service = {
     id: string;
     title: string;
@@ -8,15 +16,11 @@ export type Service = {
     outcome?: string | string[];
     timeline?: string;
     priceFrom?: string;
-    plans?: {
-        name: string;
-        price: string;
-        details: string[];
-    }[];
-    href: string;
+    href?: string;
     icon?: "web" | "backend"| "seo" | "cart" | "event" | "tool" | "resume";
     featured?: boolean;
     active?: boolean;
+    plans?: PlanTier[];
 };
 
 export type ServiceCategory = {
@@ -38,7 +42,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 bullets: ["Design + build", "Copy polish", "Launch support"],
                 includes: [
                     "Brand starter (colors/typography)",
-                    "Contact from",
+                    "Contact form",
                     "Copy polish",
                     "Responsive design",
                     "Analytics setup",
@@ -135,7 +139,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     },
     {
         id: "celebration-sites",
-        title: "Celebration Sites (Speciality Niche)",
+        title: "Celebration Sites (Specialty Niche)",
         items: [
             {
                 id:"wedding-website",
@@ -297,33 +301,39 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 ],
                 plans: [
                     {
+                        id: "basic",
                         name: "Basic",
                         price: "$149/mo",
-                        details: [
+                        perks: [
                             "Backups",
                             "Uptime checks",
                             "Security updates",
                             "1 hour changes",
                         ],
+                        featured: true,
                     },
                     {
+                        id: "growth",
                         name: "Growth",
                         price: "$349/mo",
-                        details: [
+                        perks: [
                             "Everything in Basic",
                             "3 hours changes",
                             "Quarterly performance/SEO",
                         ],
+                        featured: true,
                     },
                     {
+                        id: "pro",
                         name: "Pro",
                         price: "$699/mo",
-                        details: [
+                        perks: [
                             "Everything in Growth",
                             "8 hours changes",
                             "Priority support",
                             "Monthly UX review",
                         ],
+                        featured: true,
                     },
                 ],
                 href: "/services#site-care-plans",
