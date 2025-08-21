@@ -1,0 +1,180 @@
+.page {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 5rem 1.25rem 3rem;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.hero { text-align: center; margin-bottom: 2.5rem; }
+.h1 { font-size: 2.1rem; margin: 0; }
+
+.lead {
+    max-width: 48rem;
+    margin: 0.75rem auto 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.band {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.25rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.mission p { margin: 0.5rem 0 0; }
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.stats li {
+    background: var(-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.statNum { display: block; font-size: 1.35rem; font-weight: 800; }
+
+.values { margin: 2rem 0; }
+.h2 { font-size: 1.6rem; margin: 0 0 0.75rem; }
+
+.valueGrid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(4, minmax(o, 1fr));
+}
+
+.valueGrid article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.9rem;
+}
+
+.valueGrid h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+
+.process { margin: 2rem 0; }
+
+.steps {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.steps li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.8rem;
+}
+
+.stack { margin: 2rem 0; }
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0.25rem 0 0;
+    padding: 0;
+}
+
+.pills li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.4rem 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.stackNote { margin-top: 0.6rem; color: var(--muted); }
+
+.timeline { margin: 2rem 0; }
+.timeline ul { list-style: none; margin: 0; padding: 0;}
+
+.timeline li {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 0.75rem;
+    padding: 0.6rem .5rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.timeline time { font-weight: 700; }
+.timeline span { margin-left: 1.5rem;}
+
+.faq { margin: 2rem 0;}
+
+.faq details {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.faq summary { cursor: pointer; font-weight: 600;}
+
+.ctaBand {
+    margin-top: 2.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+}
+
+.ctaInner { padding: 1.25rem; text-align: center; }
+.ctaTitle { margin: 0; font-size: 1.4rem; }
+.ctaText { margin: 0.4rem 0 0.8rem; color: var(--muted); }
+.ctaRow { display: flex; gap: 0.6rem; justify-content: center; }
+
+.ctaPrimary,
+.ctaSecondary {
+    background: var(--header-bg);
+    color: #000000;
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ctaPrimary:hover,
+.ctaSecondary:hover { background: var(--btn-hover);}
+
+@media (max-height: 500px) {
+    .h1 { font-size: .6rem;}
+    .page { padding-top: 4rem; }
+    .h1 { font-size: 1.4rem; }
+}
+
+@media (max-height: 600px) {
+    .page { padding-top: 4.5rem; }
+    .h1 { font-size: 1.7rem; }
+    .stats { grid-template-columns: 1fr 1fr 1fr; }
+    .steps { grid-template-columns: 1fr;}
+}
+
+@media (max-width: 960px) {
+    .h1 { font-size: 1.5rem;}
+    .band { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .steps { grid-template-columns: 1fr 1fr; }
+}
+

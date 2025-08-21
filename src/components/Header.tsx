@@ -116,7 +116,7 @@ export default function Header() {
                     <nav className={styles.nav} aria-label="Primary navigation">
 
                         <button className={styles.link} onClick={() => jumpTo("#about")}>Home</button>
-                        <button className={styles.link} onClick={() => jumpTo("#about")}>About</button>
+                        <button className={styles.link} onClick={() => { window.location.href = "/about"}}>About</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/projects"}}>Our Work</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/services"}}>Services</button>
                     </nav>
@@ -129,9 +129,11 @@ export default function Header() {
                         role="menu"
                         aria-label="Mobile navigation"
                         >
-                            <Link href="/#about" onClick={() => setMenuOpen(false)}>About</Link>
-                            <Link href="/#our-work" onClick={() => setMenuOpen(false)}>Our Work</Link>
-                            <Link href="/#services" onClick={() => setMenuOpen(false)}>Services</Link>
+
+                            <Link href="/#about" onClick={() => setMenuOpen(false)}>Home</Link>
+                            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link href="/projects" onClick={() => setMenuOpen(false)}>Our Work</Link>
+                            <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
                             <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
                         </div>
                     )}

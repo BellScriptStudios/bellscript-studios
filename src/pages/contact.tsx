@@ -25,7 +25,7 @@ export default function ContactPage() {
             <header className={styles.header}>
                 <h1 id="contact-h1" className={styles.h1}>Work with us</h1>
                 <p className={styles.lead}>
-                    Pefer email? User the form. Ready to chat? Pick a time right on this page.
+                    Pefer email? Use the form. Ready to chat? Pick a time right on this page.
                 </p>
             </header>
 
