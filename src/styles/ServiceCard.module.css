@@ -4,28 +4,37 @@
     border-radius: 0.5rem;
     padding: 1.25rem;
     text-align: left;
-    transition: box-shadow 0.25s ease transform 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    justify-content: flex-start;
 }
 
+.card :where(h3, p, ul) { margin-block: 0; }
 .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
 
-.header { display: flex;
+.header { 
+    display: flex;
     align-items: center;
-    gap: 0.625ren;
-    margin-bottom: 0.25rem;
+    gap: 0.625rem;
+    margin-bottom: 0.4rem;
 }
 
-.title { margin: 0; font-size: 1.1ren; }
+.title { 
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
 
 .blurb { 
-    margin: .0.75rem 0 0.75rem;
+    margin: .035rem 0 0.5rem;
     line-height: 1.5;
     color: var(--text);
 }
 
-.bullets { margin: 0 0 0.75rem; padding-left: 1.1rem; }
-.bullets li { margin:  0.25rem; }
-.ctaRow { margin-top: 0.25rem;}
+.bullets { margin-top: 0.45rem; padding-left: 1.1rem; }
+.bullets li { margin:  0.25rem 0; }
+.ctaRow { padding-top: 0.6rem; }
 
 .link {
     font-weight: 600;
