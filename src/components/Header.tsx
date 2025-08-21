@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "@/styles/Header.module.css";
-import Link from "next/link";
 
 export default function Header() {
     const router = useRouter();
@@ -129,12 +128,11 @@ export default function Header() {
                         role="menu"
                         aria-label="Mobile navigation"
                         >
-
-                            <Link href="/#about" onClick={() => setMenuOpen(false)}>Home</Link>
-                            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-                            <Link href="/projects" onClick={() => setMenuOpen(false)}>Our Work</Link>
-                            <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-                            <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+                            <button className={styles.link} onClick={() => { window.location.href = "/"}}>Home</button>
+                            <button className={styles.link} onClick={() => { window.location.href = "/about"}}>About</button>
+                            <button className={styles.link} onClick={() => { window.location.href = "/projects"}}>Our Work</button>
+                            <button className={styles.link} onClick={() => { window.location.href = "/services"}}>Services</button>
+                            <button className={styles.link} onClick={() => { window.location.href = "/contact"}}>Contact Us</button>
                         </div>
                     )}
                     <div className={styles.actions}>
