@@ -8,7 +8,7 @@ export default function ServicesPage() {
     return (
         <>
             <Head>
-                <title>Services - BelleScript Studios </title>
+                <title>Services - BellScript Studios </title>
                 <meta
                     name="description"
                     content="Explore all services from BellScript Studios — signature packages, celebration sites, fixes & care, and integrations."
@@ -22,26 +22,31 @@ export default function ServicesPage() {
                     </p>
                 </header>
 
-                {SERVICE_CATEGORIES.map((cat) => (
-                    <section
-                        key={cat.id}
-                        id={cat.id}
-                        className={styles.category}
-                        aria-labelledby={`${cat.id}-title`}
-                    >
-                        <h2 id={`${cat.id}-title`} className={styles.catTitle}>
-                            {cat.title}
-                        </h2>
+                {SERVICE_CATEGORIES.map((cat) => {
+                    const visibleItems = cat.items.filter((svc) => svc.active !== false);
 
-                        <div className={styles.grid}>
-                            {cat.items.map((svc) => (
-                                <div key={svc.id} id={svc.id} className={styles.anchorWrap}>
-                                    <ServiceCard service={svc} />
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                ))}
+                    if (visibleItems.length === 0) return null;
+                    return (
+                        <section
+                            key={cat.id}
+                            id={cat.id}
+                            className={styles.category}
+                            aria-labelledby={`${cat.id}-title`}
+                        >
+                            <h2 id={`${cat.id}-title`} className={styles.catTitle}>
+                                {cat.title}
+                            </h2>
+
+                            <div className={styles.grid}>
+                                {visibleItems.map((svc) => (
+                                    <div key={svc.id} id={svc.id} className={styles.anchorWrap}>
+                                        <ServiceCard service={svc} />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )
+                })}
 
                 <div className={styles.bottomCta}>
                     <Link
