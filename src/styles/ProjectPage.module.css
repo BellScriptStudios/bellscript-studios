@@ -1,0 +1,19 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.page h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.pageIntro {
+    max-width: 720rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--muted);
+    line-height: 1.6;
+}

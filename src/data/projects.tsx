@@ -3,10 +3,21 @@ export type Project = {
     title: string;
     blurb: string;
     features?: string[];
-    link?: { href: string; label: string; ariaLabel?: string };
-    image?: { src: string; alt: string; width?: number; height?: number };
+    link?: { 
+        href: string;
+        label: string;
+        ariaLabel?: string
+    };
+    image?: {
+        src: string;
+        alt: string;
+        width?: number;
+        height?: number
+    };
     status?: "live" | "coming-soon";
     icon?: "umbrella" | "cli" | "shop";
+    featured?: boolean;
+    active?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -23,9 +34,14 @@ export const PROJECTS: Project[] = [
         ],
         link: { href: "https://www.themorningbell.co", 
                 label: "Coming Soon" },
-        image: { src: "/images/tmb-logo.png", alt: "The Morning Bell Co. thumbnail", width: 300, height: 200 },
+        image: { 
+            src: "/images/tmb-logo.png",
+            alt: "The Morning Bell Co. thumbnail",
+            width: 300, height: 200 },
         status: "coming-soon",
         icon: "umbrella",
+        featured: true,
+        active: true,
     },
 
     {
@@ -50,6 +66,8 @@ export const PROJECTS: Project[] = [
         image: { src: "/images/smartspend-thumb.png", alt: "SmartSpend CLI thumbnail", width: 300, height: 200 },
         status: "live",
         icon: "cli",
+        featured: true,
+        active: true,
     },
 
     {
@@ -66,5 +84,10 @@ export const PROJECTS: Project[] = [
         image: { src: "/images/candle-phase-bs-thumbnail.png", alt: "Candle Phase thumbnail", width: 300, height: 200 },
         status: "coming-soon",
         icon: "shop",
+        featured: true,
+        active: true,
     },
 ];
+
+export const FEATURED_PROJECTS: Project[] = PROJECTS
+    .filter((p) => p.featured && p.active !== false);

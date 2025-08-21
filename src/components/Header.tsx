@@ -114,8 +114,10 @@ export default function Header() {
                     </div>
 
                     <nav className={styles.nav} aria-label="Primary navigation">
+
+                        <button className={styles.link} onClick={() => jumpTo("#about")}>Home</button>
                         <button className={styles.link} onClick={() => jumpTo("#about")}>About</button>
-                        <button className={styles.link} onClick={() => jumpTo("#our-work")}>Our Work</button>
+                        <button className={styles.link} onClick={() => { window.location.href = "/projects"}}>Our Work</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/services"}}>Services</button>
                     </nav>
 

@@ -12,7 +12,7 @@ export default function Footer() {
 
             <nav className={styles.footerNav} aria-label="Footer navigation">
                 <Link href="/#about">About</Link>
-                <Link href="/#our-work">Our work</Link>
+                <Link href="/projects">Our work</Link>
                 <Link href="/contact">Contact us</Link>
                 <a 
                     href="mailto:hello@bellscript.studio" 

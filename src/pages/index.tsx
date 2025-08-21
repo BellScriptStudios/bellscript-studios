@@ -1,6 +1,7 @@
 import styles from "@/styles/Home.module.css";
+
 import ProjectSection from "@/components/ProjectSection";
-import { PROJECTS } from "@/data/projects";
+import { FEATURED_PROJECTS } from "@/data/projects";
 
 import ServicesSection from "@/components/ServicesSection";
 import { FEATURED_SERVICES } from "@/data/services"
@@ -27,7 +28,10 @@ export default function Home() {
           id="our-work"
           heading="Our Work"
           intro="A few recent builds and brand projects we’re excited about."
-          items={PROJECTS}
+          items={FEATURED_PROJECTS}
+          showViewAll={true}
+          viewAllHref="/projects"
+          viewAllLabel="View all projects"
         />
 
         <ServicesSection

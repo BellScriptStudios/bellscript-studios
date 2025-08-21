@@ -20,9 +20,26 @@
 }
 
 .stack {
+    display: grid;
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.footerCta { margin-top: 1rem; }
+
+.viewAll {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--header-bg);
+    border: 1px solid var(--border);
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.25s ease;
+}
+
+.viewAll:hover { background: var(--btn-hover); }
 
 @media (max-width: 768px) {
     .section { padding: 1.5rem 1rem; }
