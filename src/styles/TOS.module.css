@@ -41,7 +41,7 @@
 
 @media (max-width: 480px) {
   .page {
-    padding: calc(var(--header-offset) + 0.5rem) 0.75rem 2.5rem;
+    padding: 0.85rem 1rem 0;
   }
   .section {
     padding: 0.85rem 1rem;
