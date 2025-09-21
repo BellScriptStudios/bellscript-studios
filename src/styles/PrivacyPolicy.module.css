@@ -1,0 +1,55 @@
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.lead {
+    color: var(--muted);
+    margin-bottom: .25rem;
+}
+
+.intro {
+    max-width: 60ch;
+    margin: .75rem auto 0;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.section {
+    margin-top: 1.5rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    padding: 1rem 1.25rem;
+}
+
+.section h2 {
+    font-size: 1.25rem;
+    margin: 0 0 .5rem;
+}
+
+.section p {
+    margin: .25rem 0 0;
+    line-height: 1.6rem;
+}
+
+.section ul {
+    padding-left: 1.1rem;
+    margin: .25rem 0 0;
+}
+
+.section li {
+    margin: .25rem 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .section { padding: .85rem 1rem; }
+  .section h2 { font-size: 1.1rem; }
+}
