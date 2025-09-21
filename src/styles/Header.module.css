@@ -38,12 +38,12 @@
 
 .stickyHeaderInner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: space-between;
+    gap: .75rem;
     padding: 1rem;
     padding-left: max(1rem, env(safe-area-inset-left, 0));
-    padding-right: max(1rem, env(safe-area-inset-left, 0));
+    padding-right: max(1rem, env(safe-area-inset-right, 0));
     transition: all 0.25s ease;
 }
 
@@ -72,9 +72,10 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin: 0 15.25rem;
+    margin: 0;
+    flex: 1;
+    justify-content: center;
     transition: margin 0.25s ease;
-
 }
 
 .link {
