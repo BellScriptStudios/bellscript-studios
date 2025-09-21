@@ -3,8 +3,8 @@ import Head from "next/head"
 import styles from "@/styles/ContactPage.module.css"
 
 export default function ContactPage() {
-    const title = "Work with us — BellScript Studios";
-    const desc = "Tell us about your project or book a call. We build fast, modern, accessible sites and apps."
+    const title = "Contact Us — BellScript Studios";
+    const desc = "Explore all services from BellScript Studios — signature packages, celebration sites, fixes & care, and integrations.";
 
     return (
         <>
@@ -23,13 +23,13 @@ export default function ContactPage() {
 
         <main className={styles.page} role="main" aria-labelledby="contact-header">
             <header className={styles.header}>
-                <h1 id="contact-h1" className={styles.h1}>Work with us</h1>
+                <h1 id="contact-h1">Work with us</h1>
                 <p className={styles.lead}>
                     Pefer email? Use the form. Ready to chat? Pick a time right on this page.
                 </p>
             </header>
 
-            <section className={styles.grid} aria-label="Contact and booking">
+            <section id="booking" className={styles.grid} aria-label="Contact and booking">
                 <article className={styles.card} role="region" aria-labelledby="contact-form-heading">
                     <h2 id="contact-form-heading" className={styles.h2}>Send a message</h2>
 

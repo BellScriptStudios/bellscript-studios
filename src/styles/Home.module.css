@@ -3,29 +3,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg);
   color: var(--text);
+  padding-top: 0;
 }
 
-.main,
-.footer {
+.main {
   padding-left: calc(4rem + env(safe-area-inset-left));
   padding-right: calc(4rem + env(safe-area-inset-right));
 }
 
 .about {
-  padding: 3rem 2rem;
   text-align: center;
   color: var(--text);
-  scroll-margin-top: 6rem;
-  margin-top: 0.7rem;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 .about p {
@@ -35,109 +25,40 @@
   line-height: 1.6;
 }
 
-.contact {
-  padding: 2rem 2rem;
-  max-width: 600px;
-  margin: 2rem auto;
-  scroll-margin-top: 6rem;
-  text-align: left;
+.projects {
+  margin-bottom: 1rem;
 }
 
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form label {
-  font-weight: 600;
-}
-
-.form input,
-.form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.form button {
-  background-color: #3d5a80;
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.form button:hover {
-  background-color: #2b4565;
+.projects p,
+.services p {
+  font-size: 1.25rem;
 }
 
 @media (max-width: 480px) {
 
-  .main {
-    padding-top: 0.5rem;
-  }
+  .main { padding-top: 0; }
 
   .about p {
-    font-size: 0.85rem;
+    font-size: .9rem;
     line-height: 1.55;
-  }
-
-  .about h2,
-  .contact h2 {
-    font-size: 1.5rem;
-  }
-
-  .footerNav a,
-  .footerBrand p {
-    font-size: 0.85rem;
   }
 
   .footerBrand h3 {
     font-size: 0.95rem;
   }
-
-  .footerMeta {
-    flex-direction: column;
-    gap: 0.25rem;
-    align-items: flex-start;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 680px) {
-  .footerInner {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .footerNav { justify-content: flex-start; }
-  .footerMeta { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 768px) {
 
   .main,
   .footer {
-    padding-left: calc(1rem + env(safe-area-inset-left));
-    padding-right: calc(1rem + env(safe-area-inset-right));
+    padding: 1rem calc(2rem + env(safe-area-inset-left));
   }
 }
 
 @media (max-height: 500px) {
-
   .main {
-    padding-top: 0.5rem;
+    padding-top: 0;
   }
 
   .about p{
@@ -145,56 +66,4 @@
     line-height: 1.55;
   }
 
-  .about h2,
-  .contact h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact p {
-    font-size: 1rem;
-    line-height: 1.55;
-  }
-
-  .form label {
-    font-size: 0.85rem;
-  }
-
-  .footerInner {
-    display: grid;
-    grid-template-columns: 5.5fr 7fr;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1rem 2rem;
-  }
-
-  .footerBrand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .footerBrand h3 {
-    font-size: 0.9rem;
-  }
-
-  .footerBrand p {
-    font-size: 0.8rem;
-  }
-
-  .footerNav {
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-  }
-  .footerNav a {
-    font-size: 0.8rem;
-    padding-bottom: 1px;
-  }
-
-  .footerMeta {
-    font-size: 0.7rem;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-  }
 }

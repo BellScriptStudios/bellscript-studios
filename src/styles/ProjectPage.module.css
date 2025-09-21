@@ -1,19 +1,30 @@
 .page {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 5rem;
+    padding: 0 1rem;
 }
 
-.page h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
+.h1 { text-align: center; }
 
-.pageIntro {
-    max-width: 720rem;
-    margin: 0 auto 2rem;
+.hero { text-align: center; margin-bottom: 1.5rem; }
+
+.lead {
     text-align: center;
+    max-width: 48rem;
+    margin: 0.75rem auto 0;
     color: var(--muted);
     line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .hero { margin-bottom: 0;}
+    .lead { font-size: .9rem; margin-top: 0;}
+    .projectCard:first-child { margin-top: 0;}
+}
+
+@media (max-width: 700px) {
+    .stack {padding-inline: 0;}
+}
+@media (max-width: 1030px) {
+    .page { padding: 1rem 2rem;}
 }

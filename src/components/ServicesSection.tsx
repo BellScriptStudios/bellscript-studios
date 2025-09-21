@@ -16,7 +16,7 @@ export default function ServicesSection({
 }) {
     return (
          <section id={id} className={styles.section}>
-            <h2 className={styles.h2}>{heading}</h2>
+            <h2>{heading}</h2>
             {intro && <p className={styles.intro}>{intro}</p>}
 
             <div className={styles.grid}>

@@ -1,13 +1,10 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "@/styles/Header.module.css";
 
 export default function Header() {
-    const router = useRouter();
-    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -77,29 +74,16 @@ export default function Header() {
         localStorage.setItem("theme", themeStr);
         setThemeColorMeta();
     };
-
-    const jumpTo = (id: string) => {
-        if (pathname === "/") {
-            document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-        } else {
-            router.push(`/${id}`);
-        }
-    };
     return (
-            <header className={styles.stickyheader} role="banner" aria-label="Site header">
+            <header className={styles.stickyHeader} role="banner" aria-label="Site header">
                 <div className={`${styles.stickyHeaderInner} ${scrolled ? styles.scrolledInner : ""}`}>
                     <div 
                     className={styles.headerBrand}
                     role="button"
                     tabIndex={0}
                     aria-label="Scroll to top"
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    onKeyDown={(e) =>  {
-                        if (e.key == "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                        }
-                    }}
+                    onClick={() => { window.location.href = "/"}}
+                    
                     >
                     <Image
                         src="/images/bs-logo.png"
@@ -113,8 +97,7 @@ export default function Header() {
                     </div>
 
                     <nav className={styles.nav} aria-label="Primary navigation">
-
-                        <button className={styles.link} onClick={() => jumpTo("#about")}>Home</button>
+                        <button className={styles.link} onClick={() => { window.location.href = "/"}}>Home</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/about"}}>About</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/projects"}}>Our Work</button>
                         <button className={styles.link} onClick={() => { window.location.href = "/services"}}>Services</button>

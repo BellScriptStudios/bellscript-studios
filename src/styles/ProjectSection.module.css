@@ -1,21 +1,11 @@
-.section {
-    padding: 2rem 2rem;
-    text-align: center;
-    scroll-margin-top: 6rem;
-}
-
-.section h2 {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin: 0 0 0.4rem;
-}
+.section { padding: 2rem; text-align: center; }
 
 .intro {
     font-size: 1.25rem;
     font-weight: 400;
     color: var(--muted);
     line-height: 1.5;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto;
     max-width: 40rem;
 }
 
@@ -51,6 +41,8 @@
     .section { padding: 1.25rem 1rem; }
     .section h2 { font-size: 1.4rem; }
     .intro { font-size: 0.9rem; }
+    #our-work li { font-size: 1rem; }
+    .viewAll { font-size: .9rem; padding: .5rem; }
 }
 
 @media (max-height: 500px) {

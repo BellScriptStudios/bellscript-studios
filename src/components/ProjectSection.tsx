@@ -11,6 +11,7 @@ type Props = {
     showViewAll?: boolean;
     viewAllHref?: string;
     viewAllLabel?: string;
+    showHeading?: boolean;
 };
 
 export default function ProjectSection({
@@ -21,14 +22,17 @@ export default function ProjectSection({
     showViewAll = false,
     viewAllHref = "/projects",
     viewAllLabel = "View all projects",
+    showHeading = true,
 }: Props) {
     return (
         <section id={id} className={styles.section}>
-            <h2>{heading}</h2>
-            {intro && <p className={styles.intro}>{intro}</p>}
+            {showHeading && <h2>{heading}</h2>}
+            {showHeading && intro && <p className={styles.intro}>{intro}</p>}
 
             <div className={styles.stack}>
-                {items.map((p) => <ProjectCard key={p.id} project={p} />)}
+                {items.map((p) => (
+                    <ProjectCard key={p.id} project={p} />
+                ))}
             </div>
 
             {showViewAll && (

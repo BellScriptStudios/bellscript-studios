@@ -3,20 +3,22 @@ import Link from "next/link";
 import styles from "@/styles/AboutPage.module.css"
 
 export default function AboutPage() {
+    const title = "About — BellScript Studios";
+    const desc = "The story, approach and values behind BellScript Studios. Modern accessible, and fast web development based in Michigan.";
+
     return (
         <>
         <Head>
-            <title>About — BellScript Studios</title>
-            <meta 
-                name="description"
-                content="The story, approach and values behind BellScript Studios. Modern accessible, and fast web development based in Michigan."
-            />
+            <title>{title}</title>
             <link rel="canonical" href="https://bellscript.studio/about" />
+            <meta property="og:title" content="About BellScript Studios" />
+            <meta property="og:description" content={desc} />
+            <meta property="og:type" content="website" />
         </Head>
 
         <main className={styles.page} role="main" aria-labelledby="about-h1">
             <header className={styles.hero}>
-                <h1 id="about-h1" className={styles.h1}>About BellScript Studios</h1>
+                <h1 id="about-h1">About BellScript Studios</h1>
                 <p className={styles.lead}>
                     We build clear, fast, and accessible web experiences — 
                     with a studio ethos that values craft, communication, 
@@ -26,7 +28,7 @@ export default function AboutPage() {
 
             <section className={styles.band} aria-label="Mission and quick facts">
                 <div className={styles.mission}>
-                    <h2 className={styles.h2}>Our Mission</h2>
+                    <h2 id="mission-h2">Our Mission</h2>
                     <p>
                         Help founders and small teams launch with confidence—combining thoughtful design,
                         robust engineering, and an obsession with performance and accessibility.
@@ -116,11 +118,11 @@ export default function AboutPage() {
                 </details>
                 <details>
                     <summary>Do you offer payment plans?</summary>
-                    <p>Yes, our Site Care Plans cover updates, security, and small tweaks.</p>
+                    <p>Yes, milestone-based for most packages.</p>
                 </details>
                 <details>
                     <summary>Do you maintain sites after launch?</summary>
-                    <p>Yes, milestone-based for most packages.</p>
+                    <p>Yes, our Site Care Plans cover updates, security, and small tweaks.</p>
                 </details>
             </section>
 

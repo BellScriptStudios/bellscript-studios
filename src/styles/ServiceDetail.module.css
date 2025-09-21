@@ -1,13 +1,14 @@
+.main { padding: 1rem 2rem; }
+
 .detailBody{
     max-width: 1150px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     color: var(--text);
     line-height: 1.6;
 }
 
-.header { margin-top: 5rem; margin-bottom: 2rem; text-align: center; }
-.h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.header { margin: 0 0 2rem; text-align: center; }
 
 .meta {
     font-size: 0.95rem;
@@ -19,7 +20,7 @@
     margin-top: 1rem;
     font-size: 1.125rem;
     font-weight: 400;
-    color: var--text;
+    color: var(--text);
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
@@ -161,4 +162,9 @@ html[data-theme="dark"] {
 
 .backLink:hover {text-decoration: underline; background: var(--btn-hover);}
 
-@media (max-height: 960px) {.h1 { margin-top: 1.5rem;} }
+@media (max-width: 480px) {
+    .meta { font-size: .85rem; }
+    .lead { font-size: .9rem; margin-top: 0;}
+    .h2 { font-size: 1.1rem; }
+    .list li { font-size: .95rem; }
+}

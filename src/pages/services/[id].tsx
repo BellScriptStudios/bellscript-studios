@@ -6,9 +6,9 @@ const ALL = SERVICE_CATEGORIES.flatMap(c => c.items);
 
 export default function ServicePage({ service }: { service: Service}) {
     return (
-        <main>
+        <>
             <ServiceDetail service={service} />
-        </main>
+        </>
     );
 }
 

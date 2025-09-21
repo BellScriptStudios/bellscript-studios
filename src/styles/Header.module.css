@@ -23,14 +23,17 @@
   transition: font-size 0.25s ease, opacity 0.25s ease;
 }
 
-.stickyheader {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  width: 100%;
-  z-index: 1000;
-  background: var(--header-bg);
-  border-bottom: 1px solid var(--border);
-  color: #2c3e50;
+.stickyHeader {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    color: #2c3e50;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    padding-top: env(safe-area-inset-top, 0);
 }
 
 .stickyHeaderInner {
@@ -38,14 +41,19 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.75rem;
-    padding: 1.5rem 2rem;
-    padding-left: calc(2rem + env(safe-area-inset-left));
-    padding-right: calc(2rem + env(safe-area-inset-right));
+    padding: 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left, 0));
+    padding-right: max(1rem, env(safe-area-inset-left, 0));
     transition: all 0.25s ease;
 }
 
 .scrolledInner {
-    padding: 0.5rem;
+    padding: .5rem;
+}
+
+.scrolledInner .nav {
+    margin: 0 19rem;
+    transition: margin 0.25s ease;
 }
 
 .scrolledInner .logo {
@@ -60,20 +68,13 @@
     transition: font-size 0.25rem ease, opacity 0.25s ease ;
 }
 
-.stickyheader::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: env(safe-area-inset-top);
-  background: var(--header-bg);
-  z-index: -1;
-}
-
 .nav {
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-left: auto;
+    margin: 0 15.25rem;
+    transition: margin 0.25s ease;
+
 }
 
 .link {
@@ -92,8 +93,7 @@
 
 .link:hover {
     color: var(--accent);
-    background-color: var(--hoverBg, rgba(0, 0, 0, 0.05));
-    border-color: var(--border);
+    background: var(--btn-hover);
 }
 
 .link[aria-current="page"] {
@@ -146,7 +146,7 @@
 
 .mobileMenu a {
     padding: 0.5rem 0.75rem;
-    color: var(--Text);
+    color: var(--text);
     border-radius: 6px;
     text-decoration: none;
 }
@@ -178,7 +178,7 @@ html[data-theme="dark"] .mobileMenu a {
 }
 
 .cta:hover {
-  background-color: #008e76;
+  background-color: var(--btn-hover);
   color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -250,11 +250,26 @@ html[data-theme="dark"] .hamburger span{
         padding: 0.5rem 0.75rem !important;
         flex: 0 0 auto;
     }
+    .themeToggle {
+        display: none;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape) {
+    .stickyHeader {
+        margin: 0;
+        width: 100vw;
+    }
+
+    .stickyHeaderInner {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 1030px) {
     .stickyHeaderInner {
         padding: 0.75rem 1rem;
+    }
 
     .nav {
         display: none;
@@ -264,7 +279,6 @@ html[data-theme="dark"] .hamburger span{
         display: flex;
         
     }
-}
     .cta { display: none; }
 }
 

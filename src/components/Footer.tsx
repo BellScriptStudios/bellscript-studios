@@ -11,7 +11,7 @@ export default function Footer() {
             </div>
 
             <nav className={styles.footerNav} aria-label="Footer navigation">
-                <Link href="/#about">Home</Link>
+                <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/projects">Our work</Link>
                 <Link href="/contact">Contact us</Link>
@@ -35,6 +35,10 @@ export default function Footer() {
               <span>© {new Date().getFullYear()} BellScript Studios</span>
               <span>All Rights Reserved</span>
               <span>Made in Michigan</span>
+            </div>
+            <div className={styles.footerLinks}>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/terms-of-service">Terms of Service</Link>
             </div>
         </footer>
     );

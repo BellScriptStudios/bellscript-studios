@@ -5,18 +5,22 @@ import ServiceCard from "@/components/ServiceCard";
 import { SERVICE_CATEGORIES } from "@/data/services";
 
 export default function ServicesPage() {
+    const title = "Services — BellScript Studios";
+    const desc = "Explore all services from BellScript Studios — signature packages, celebration sites, fixes & care, and integrations.";
+
     return (
         <>
             <Head>
-                <title>Services - BellScript Studios </title>
-                <meta
-                    name="description"
-                    content="Explore all services from BellScript Studios — signature packages, celebration sites, fixes & care, and integrations."
-                />
+                <title>{title}</title>
+                <link rel="canonical" href="https://bellscript.studio/services" />
+                <meta property="og:title" content="Explore BellScript Studios&apos; web and software development services, from personal websites to custom business solutions." />
+                <meta property="og:description" content={desc} />
+                <meta property="og:type" content="website" />
             </Head>
+
             <main className={styles.main}>
                 <header className={styles.pageHeader}>
-                    <h1 className={styles.h1}>Services</h1>
+                    <h1>Services</h1>
                     <p className={styles.lead}>
                         From quick launches to ongoing care, here&apos;s everything we offer. Click any card to learn more.
                     </p>

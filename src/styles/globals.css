@@ -16,6 +16,7 @@
   --footer-bg: #eef4f9;
   --footer-text: #2c3e50;
   --footer-border: #dde4ee;
+  --header-offset: 8rem;
 }
 
 html[data-theme="light"] {
@@ -26,6 +27,7 @@ html[data-theme="light"] {
   --border: #dde4ee;
   --accent: #ffffff;
   --accentText: #1B3B5F;
+  --btn-hover: #008e76;
   --header-bg: #00BFA6;
   --footer-bg: #eef4f9;
   --footer-text: #2c3e50;
@@ -53,6 +55,28 @@ html[data-theme="dark"] {
     --footer-border: #2a2e44;
 }
 
+section[id], [id].section, main [id] { scroll-margin-top: var(--header-offset); }
+main, .page, .siteMain { padding-top: var(--header-offset);}
+
+.page h1,
+main > h1,
+.pageHeader h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+#about h2,
+#our-work h2,
+#services h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
 
 html {
   scroll-behavior: smooth;
@@ -110,7 +134,36 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem;}
+
+  #about h2,
+  #our-work h2,
+  #services h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  #our-work p,
+  #services p {
+    font-size: .9rem; line-height: 1.4;
+    margin-bottom: .5rem;
+  }
+
+  #services {
+    padding: 0 1rem;
+  }
+
+  #mission-h2,
+  #values-h2,
+  #process-h2,
+  #stack-h2,
+  #timeline-h2,
+  #faq-h2 { font-size: 1.4rem; margin-bottom: 0; }
+}
+
 @media (max-width: 768px) {
+  :root { --header-offset: 3rem; }
   html, body {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -118,5 +171,12 @@ a {
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
+  }
+  .page h1,
+  main > h1 {
+    font-size: 1.75rem;
+  }
+  #about h1 {
+    font-size: 1rem;
   }
 }

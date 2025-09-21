@@ -38,7 +38,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                 id:"website-in-a-week",
                 title: "Website-in-a-Week",
                 blurb: "A modern 1–3 page website launched in 5 business days.",
-                long: "A modern 1–3 page website, styled to your brand, launched in just 5 business days. Perfect for getting online quickly with a polished presence.",
+                long: "A modern 1–3 page website, styled to your brand, launched in 5 business days. Perfect for getting online quickly with a polished presence.",
                 bullets: ["Design + build", "Copy polish", "Launch support"],
                 includes: [
                     "Brand starter (colors/typography)",
@@ -63,7 +63,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"local-business-bundle",
                 title: "Local Business Bundle",
-                blurb: "Everything a local business needs to be found and trusted online",
+                blurb: "Everything a local business needs to be found and trusted online.",
                 long: "A professional 4-page website designed to act as your digital front door, with booking/contact features to bring in new customers.",
                 bullets: ["Google Business Profile", "Local SEO basics", "Contact/Booking"],
                 includes: [
@@ -103,7 +103,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Collect feedback before scaling"
                 ],
                 timeline: "4 weeks",
-                priceFrom: "Starting at $6.000",
+                priceFrom: "Starting at $6,000",
                 href: "/services#comment-app-mvp",
                 icon: "backend",
                 featured: false,
@@ -371,7 +371,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             {
                 id:"integrations-and-automation",
                 title: "Integrations & Automation",
-                blurb: "Connect tools and automate your workflow..",
+                blurb: "Connect tools and automate your workflow.",
                 long: "Streamline processes with integrations between your apps and services.",
                 bullets: ["Stripe/Notion/Airtable", "Dashboards", "Zapier/Make"],
                 includes: [
@@ -483,7 +483,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
                     "Custom scripts & notifications",
                 ],
                 outcome: [
-                    "RelHours saved on repetitive tasks",
+                    "Hours saved on repetitive tasks",
                     "Greater accuracy and consistency",
                     "Smooth cross-app data flows",
                 ],
