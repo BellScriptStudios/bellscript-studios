@@ -62,8 +62,12 @@
   }
 
   .about p{
-    font-size: 0.65rem;
+    font-size: 1rem;
     line-height: 1.55;
   }
 
+  .projects p,
+  .services p {
+    font-size: 1.1rem;
+  }
 }

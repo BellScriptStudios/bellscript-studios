@@ -67,3 +67,9 @@
 @media (max-width: 768px) {
     .card { padding: 1rem; }
 }
+
+@media (max-height: 500px) {
+    .title {font-size: 1.1rem; }
+    .card p { font-size: .95rem; }
+    .card li { font-size: .9rem; }
+}

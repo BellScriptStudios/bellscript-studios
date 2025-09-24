@@ -141,7 +141,7 @@ a {
   #about h2,
   #our-work h2,
   #services h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: .5rem;
   }
 
@@ -187,4 +187,12 @@ a {
 
 @media (max-height: 520px) {
   main, .page, .siteMain { padding-top: 4rem;}
+  
+  #about h2,
+  #our-work h2,
+  #services h2 {
+    font-size: 1.4rem;
+    margin-bottom: .25rem;
+
+  }
 }
