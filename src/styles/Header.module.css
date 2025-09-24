@@ -51,11 +51,6 @@
     padding: .5rem;
 }
 
-.scrolledInner .nav {
-    margin: 0 19rem;
-    transition: margin 0.25s ease;
-}
-
 .scrolledInner .logo {
     transform: scale(0.85);
     opacity: 0.95;
