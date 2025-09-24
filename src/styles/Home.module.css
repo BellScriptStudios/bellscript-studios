@@ -52,7 +52,7 @@
 
   .main,
   .footer {
-    padding: 1rem calc(2rem + env(safe-area-inset-left));
+    padding: 0 calc(1.5rem + env(safe-area-inset-left));
   }
 }
 

@@ -32,9 +32,15 @@ export default function Footer() {
             </nav>
             </div>
             <div className={styles.footerMeta}>
-              <span>© {new Date().getFullYear()} BellScript Studios</span>
+              <span>© {new Date().getFullYear()} The Morning Bell Co. LLC</span>
               <span>All Rights Reserved</span>
               <span>Made in Michigan</span>
+            </div>
+            <div className={styles.footerTag}>
+              <span>BellScript Studios — A division of The Morning Bell Co. LLC</span>
+              <span>
+                Visit <a target="_blank" href="https://www.themorningbell.co">The Morning Bell Co.</a>
+              </span>
             </div>
             <div className={styles.footerLinks}>
               <Link href="/privacy-policy">Privacy Policy</Link>

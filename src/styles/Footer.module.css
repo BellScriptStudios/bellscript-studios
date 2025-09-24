@@ -56,7 +56,7 @@
   margin: 0.75rem auto 0;
   padding-top: 1rem;
   gap: 2rem;
-  border-top: 1px dashed var(--footer-border);
+  border-top: 2px dashed var(--footer-border);
   color: var(--muted);
   text-align: center;
   font-size: 0.9rem;
@@ -65,10 +65,36 @@
   align-items: center;
 }
 
+.footerTag {
+  display: grid;
+  gap: .5rem;
+  padding-top: .5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerTag a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.footerTag a:hover {
+  color: var(--linkHover, #005499);
+  border-color: var(--linkHover, #005499);
+}
+
+.footerTag span {
+  color: var(--muted);
+  font-size: .875rem;
+}
+
 .footerLinks {
   display: flex;
   gap: 2rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -102,5 +128,14 @@ html[data-theme="dark"] .footer p{
   .footerBrand p { font-size: 0.75rem; white-space: nowrap;}
   .footer a { font-size: 0.85rem; }
   .footerNav a, .footerLinks a { font-size: 0.75rem; }
-  .footerMeta, .footerLinks { font-size: .65rem; white-space: nowrap; padding: .5rem; margin: .5rem;}
+  .footerTag span, .footerTag a { font-size: .65rem;}
+  .footerMeta {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: .65rem;
+    white-space: nowrap;
+    margin: 0;
+    padding: .5rem;
+  }
 }

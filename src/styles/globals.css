@@ -16,7 +16,7 @@
   --footer-bg: #eef4f9;
   --footer-text: #2c3e50;
   --footer-border: #dde4ee;
-  --header-offset: 8rem;
+  --header-offset: 7rem;
 }
 
 html[data-theme="light"] {
@@ -135,6 +135,7 @@ a {
 }
 
 @media (max-width: 480px) {
+  main, .page, .siteMain { padding-top: 1rem;}
   h1 { font-size: 1.5rem;}
 
   #about h2,
@@ -163,7 +164,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  :root { --header-offset: 3rem; }
   html, body {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -179,4 +179,12 @@ a {
   #about h1 {
     font-size: 1rem;
   }
+}
+
+@media (max-width: 1080px) {
+  :root { --header-offset: 6rem; }
+}
+
+@media (max-height: 520px) {
+  main, .page, .siteMain { padding-top: 4rem;}
 }

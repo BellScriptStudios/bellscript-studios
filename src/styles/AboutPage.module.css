@@ -1,7 +1,7 @@
 .page {
     max-width: 1200px;
     margin: auto;
-    padding-top: 0;
+    padding: 0;
     color: var(--text);
     line-height: 1.7;
 }
@@ -170,12 +170,13 @@
 }
 
 @media (max-width: 480px) {
-    .page {padding: 0 1rem;}
+    .page {padding: 0 1.5rem;}
     .lead { font-size: .9rem; margin-top: 0; }
     .hero {margin-bottom: 1rem; }
     .h2 {font-size: .9rems;}
     .mission p { font-size: .9rem; margin-top: 0; }
     .statNum {font-size: 1rem; }
+    .stats { display: flex; flex-direction: column; gap: .5rem;}
     .stats li { font-size: .85rem; }
     .valueGrid h3 {font-size: 1rem; }
     .valueGrid p {font-size: .9rem; }
@@ -198,7 +199,6 @@
     .steps { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 1030px) {
-    .page { padding: 1rem 2rem;}
+@media (min-width: 481px ) and (max-width: 1024px) {
+    .page { padding: 0 1rem; }
 }
-
