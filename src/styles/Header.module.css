@@ -279,9 +279,21 @@ html[data-theme="dark"] .hamburger span{
     }
 
     .hamburger {
-        display: flex;
-        
+        display: flex; 
     }
+
+    .link {
+        border-right: 1px solid transparent;
+        background: var(--card);
+        padding: .25rem;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+
+    .link:hover {
+        color: var(--text);
+    }
+    
     .cta { display: none; }
 }
 
@@ -303,3 +315,4 @@ html[data-theme="dark"] .hamburger span{
     .hamburger { display: flex; }
     .cta { display: none; }
 }
+
