@@ -168,6 +168,15 @@ export default function ServiceDetail({ service }: { service: Service }) {
                             </article>
                         )}
                     </section>
+                    <div className={styles.bottomCta}>
+                        <Link
+                            href="/contact"
+                            className={styles.primaryCta}
+                            aria-label="Contact BellScript Studios"
+                        >
+                            Start a project →
+                        </Link>
+                    </div>
                     <nav className={styles.backNav}>
                         <Link href="/services" aria-label="Return to all services" className={styles.backLink}>
                             ← Back to Services

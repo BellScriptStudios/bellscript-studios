@@ -143,6 +143,26 @@ html[data-theme="dark"] {
     .featured::before { background: #3b82f6; }
 }
 
+.bottomCta { text-align: center; margin: 1.5rem 0 0; }
+
+.primaryCta {
+    display: inline-block;
+    padding: 0.5rem .9rem;
+    border-radius: 0.6rem;
+    background: var(--header-bg);
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.primaryCta:hover {
+    filter: brightness(1);
+    transform: translateY(-1px);
+    background: var(--btn-hover);
+}
+
 .backNav { margin: 1.5rem 0; }
 
 .backLink {
@@ -159,4 +179,6 @@ html[data-theme="dark"] {
     .lead { font-size: .9rem; margin-top: 0;}
     .h2 { font-size: 1.1rem; }
     .list li { font-size: .95rem; }
+    .primaryCta { font-size: .9rem; padding: .5rem; }
+
 }
