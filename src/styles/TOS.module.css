@@ -9,6 +9,10 @@
   margin-bottom: 1.5rem;
 }
 
+.header h1 {
+  margin-bottom: .5rem;
+}
+
 .lead {
   color: var(--muted);
   margin-top: 0.25rem;

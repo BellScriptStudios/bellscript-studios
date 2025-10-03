@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
             <main className={styles.page} role="main" aria-labelledby="privacy-policy-header">
                 <header className={styles.header}>
                     <h1>Privacy Policy</h1>
-                    <p className={styles.lead}>Last updated: {new Date().toLocaleDateString(undefined, {year:"numeric", month:"long", day:"numeric"})}</p>
+                    <p className={styles.lead}>Last updated: October 2, 2025</p>
                     <p className={styles.intro}>
                         BellScript Studios (“we,” “us,” or “our”) respects your privacy. This
                         policy explains what we collect, how we use it, and your choices.

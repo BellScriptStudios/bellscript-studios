@@ -19,13 +19,7 @@ export default function TOSPage() {
             <main className={styles.page} role="main" aria-labelledby="terms-of-service-header">
                 <header className={styles.header}>
                     <h1>Terms of Service</h1>
-                    <p className={styles.lead}>
-                        Last updated:{" "}
-                        {new Date().toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",})}
-                    </p>
+                    <p className={styles.lead}>Last updated: October 2, 2025</p>
 
                     <p className={styles.intro}>
                         These Terms of Service (“Terms”) govern your use of the BellScript
