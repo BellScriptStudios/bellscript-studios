@@ -18,6 +18,18 @@
   gap: 1rem;
 }
 
+.footerLogoDark {
+  display: none;;
+}
+
+html[data-theme="dark"] .footerLogoDark{
+    display: block;
+}
+
+html[data-theme="dark"] .footerLogoLight{
+  display: none;
+}
+
 .footerBrand h3 {
   display: flex;
   flex-direction: column;
@@ -128,6 +140,10 @@ html[data-theme="dark"] .footer p{
       flex-direction: column;
       gap: 1rem;
     }
+  .footerLogoLight, .footerLogoDark {
+    width: 150px;
+    height: auto;
+  }
   .footerBrand h3 { font-size: 0.9rem; }
   .footerBrand p { font-size: 0.75rem; white-space: nowrap;}
   .footer a { font-size: 0.85rem; }
@@ -141,5 +157,12 @@ html[data-theme="dark"] .footer p{
     white-space: nowrap;
     margin: 0;
     padding: .5rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .footerLogoDark, .footerLogoLight {
+    width: 150px;
+    height: auto;
   }
 }

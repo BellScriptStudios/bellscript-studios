@@ -1,13 +1,28 @@
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
         <footer className={styles.footer} role="contentinfo">
           <div className={styles.footerInner}>
             <div className={styles.footerBrand}>
-              <h3>BellScript Studios</h3>
-              <p>Clarity. Craft. Custom-built for the future.</p>
+                <Image
+                  src="/images/bs-ccc-black.png"
+                  alt="BellScript Studios logo"
+                  width={250}
+                  height={100}
+                  className={styles.footerLogoLight}
+                  priority={false}
+                />
+                <Image
+                  src="/images/bs-ccc-white.png"
+                  alt="BellScript Studios logo"
+                  width={250}
+                  height={100}
+                  className={styles.footerLogoDark}
+                  priority={false}
+                />
             </div>
 
             <nav className={styles.footerNav} aria-label="Footer navigation">

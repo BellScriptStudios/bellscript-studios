@@ -8,9 +8,8 @@
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 250px;
+  height: 50px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -230,7 +229,7 @@ html[data-theme="dark"] .hamburger span{
         position: sticky;
     }
     .logo {
-        width: 32px;
+        width: 145px;
         height: 32px;
     }
 
@@ -299,9 +298,8 @@ html[data-theme="dark"] .hamburger span{
 
 @media (max-height: 500px) {
     .logo {
-        width: 32px;
-        height: 32px;
-        margin-left: 1.5rem;
+        width: 150px;
+        height: auto;
   }
     .brandName { font-size: 1.25rem; }
 

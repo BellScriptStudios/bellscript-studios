@@ -86,14 +86,13 @@ export default function Header() {
                     
                     >
                     <Image
-                        src="/images/bs-logo.png"
+                        src="/images/bs-header-logo.png"
                         alt="BellScript Studios logo"
                         width={40}
                         height={40}
                         className={styles.logo}
                         priority={false}
                     />
-                    <span className={styles.brandName}> BellScript Studios</span>
                     </div>
 
                     <nav className={styles.nav} aria-label="Primary navigation">
