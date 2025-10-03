@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
             src: "/images/tmb-logo.png",
             alt: "The Morning Bell Co. thumbnail",
             width: 300, height: 200 },
-        status: "coming-soon",
+        status: "live",
         icon: "umbrella",
         featured: true,
         active: true,
