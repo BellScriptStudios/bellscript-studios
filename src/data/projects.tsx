@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
             "Optimized for speed, SEO, and cross-browser compatibility",
         ],
         link: { href: "https://www.themorningbell.co", 
-                label: "Coming Soon" },
+                label: "Explore the Project →" },
         image: { 
             src: "/images/tmb-logo.png",
             alt: "The Morning Bell Co. thumbnail",
