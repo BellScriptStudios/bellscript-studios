@@ -29,11 +29,6 @@
   margin-bottom: 1rem;
 }
 
-.projects p,
-.services p {
-  font-size: 1.25rem;
-}
-
 @media (max-width: 480px) {
 
   .main { padding-top: 0; }

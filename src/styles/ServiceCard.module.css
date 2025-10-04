@@ -21,19 +21,20 @@
 }
 
 .title { 
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .blurb { 
+    font-size: 1.1rem;
     margin: .035rem 0 0.5rem;
     line-height: 1.5;
     color: var(--text);
 }
 
 .bullets { margin-top: 0.45rem; padding-left: 1.1rem; }
-.bullets li { margin:  0.25rem 0; }
+.bullets li { font-size: .95rem; margin:  0.25rem 0; }
 .ctaRow { padding-top: 0.6rem; }
 
 .link {

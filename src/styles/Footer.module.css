@@ -1,7 +1,7 @@
 .footer {
   padding: 1.5rem 2rem;
   background: var(--footer-bg);
-  margin-top: 6rem;
+  margin-top: 4rem;
   color: var(--footer-text);
   border-top: 1px solid var(--footer-border);
 }
@@ -58,7 +58,7 @@ html[data-theme="dark"] .footerLogoLight{
   color: var(--footer-text);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  padding-bottom: .5rem;
+  padding-bottom: .25rem;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -84,7 +84,7 @@ html[data-theme="dark"] .footerLogoLight{
 .footerTag {
   display: grid;
   gap: .5rem;
-  padding-top: .5rem;
+  padding: .5rem 1rem;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -93,6 +93,7 @@ html[data-theme="dark"] .footerLogoLight{
 .footerTag a {
   color: var(--muted);
   text-decoration: none;
+  padding-bottom: .25rem;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
@@ -118,6 +119,7 @@ html[data-theme="dark"] .footerLogoLight{
 
 .footerLinks a {
   white-space: nowrap;
+  padding-bottom: .25rem;
   font-size: 0.9rem;
   color: var(--muted);
   text-decoration: none;

@@ -1,9 +1,8 @@
 /* Card container */
 .projectCard {
-  display: grid;
-  grid-template-columns: 18rem 1fr;
-  gap: 1rem 1.25rem;
-  align-items: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.5rem;
@@ -17,9 +16,10 @@
 
 /* Thumbnail */
 .projectThumbWrap {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  width: 18rem;
+  flex: 0 0 15rem;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
   max-width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -30,8 +30,7 @@
 }
 .projectThumbWrap:hover { transform: scale(1.02); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
 
-.thumbnailImage { display:block; width:100%; height:auto; transition: transform .3s ease; }
-.projectThumbWrap:hover .thumbnailImage { transform: scale(1.04); }
+.thumbnailImage { display:block; width:100%; height:auto; transition: transform .3s ease; transform: scale(1.04);}
 
 html[data-theme="dark"] .projectThumbWrap {
   border-color: var(--border);
@@ -50,13 +49,13 @@ html[data-theme="dark"] .projectThumbWrap {
 }
 .projectTitle {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.25;
   font-weight: 700;
 }
 
 /* Icon */
-.projectIcon { width: 1.5rem; height: 1.5rem; flex: 0 0 auto; }
+.projectIcon { width: 1.75rem; height: 1.75rem; flex: 0 0 auto; }
 .iconFrame { fill: var(--card); stroke: var(--cmd-border); stroke-width: 1.2; }
 .iconAccent,
 .iconLine,
@@ -66,14 +65,15 @@ html[data-theme="dark"] .projectThumbWrap {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.iconAccent { stroke-width: 1.5; }
-.iconLine { stroke-width: 1.6; }
+.iconAccent { stroke-width: 1.75; }
+.iconLine { stroke-width: 1.76; }
 .iconLineThree { stroke-width: 1; }
-.iconAccentThree { fill: var(--cmd-border); stroke: var(--cmd-border); stroke-width: 1.5; }
+.iconAccentThree { fill: var(--cmd-border); stroke: var(--cmd-border); stroke-width: 1.75; }
 html[data-theme="dark"] .iconFrame { stroke:#fff; }
 
 /* Blurb */
 .projectBlurb {
+  font-size: 1.1rem;
   margin: .35rem 0 .6rem;
   line-height: 1.5;
   color: var(--text);
@@ -81,7 +81,7 @@ html[data-theme="dark"] .iconFrame { stroke:#fff; }
 
 /* Features */
 .projectDetails h5 {
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--muted);
   margin: 0 0 .25rem;
@@ -90,7 +90,7 @@ html[data-theme="dark"] .iconFrame { stroke:#fff; }
   margin: 0 0 .25rem;
   padding-left: 1.125rem;
 }
-.features li { margin: .25rem 0; line-height: 1.45; }
+.features li { font-size: .95rem; margin: .25rem 0; line-height: 1.45; }
 
 /* CTA / Badge row */
 .ctaSlot {
